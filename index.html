@@ -232,7 +232,7 @@ input,select,textarea{border-color:var(--ib,var(--border))!important}
 .ws.go{animation:wv 1.2s ease-out 1}@keyframes wv{from{transform:translateX(-30px)}to{transform:translateX(0)}}
 }
 .sec{background:var(--card);border:1px solid var(--border);border-radius:18px;margin-bottom:10px}.sec>summary{padding:14px 16px;min-height:54px;font-weight:700;font-size:1rem;list-style:none;display:flex;align-items:center;cursor:pointer}.sec>summary::-webkit-details-marker{display:none}.sec>summary::after{content:"▾";margin-inline-start:auto;transition:transform .2s}.sec[open]>summary::after{transform:rotate(180deg)}.sb{padding:0 12px 12px}.sb .card{box-shadow:none}
-.avm{flex-shrink:0}.avi{opacity:.5}.avi.on{opacity:1;color:var(--accent)}.avi svg,.avm svg{display:block;margin:0 auto;filter:drop-shadow(0 3px 6px rgba(0,0,0,.35))}.avi small{display:block;margin-top:2px}
+.avm{flex-shrink:0}.avi{opacity:.75}.avi.on{opacity:1;color:var(--accent);font-weight:700}.avi:not(.on) svg{filter:saturate(.7)}.avi svg,.avm svg{display:block;margin:0 auto;filter:drop-shadow(0 3px 6px rgba(0,0,0,.35))}.avi small{display:block;margin-top:2px}
 </style>
 </head>
 <body>
@@ -870,7 +870,7 @@ function ttClose(){const el=document.querySelector('#tt');TTT++;el.hidden=true;e
 function remCard(){const R=remGet(),ti=(k,i)=>`<input type="time" data-act="remt" data-k="${k}" data-v="${i}" value="${R[k][i]}" aria-label="${t('m_'+k)}">`;
  return `<div class="card" style="--c:var(--accent2)"><h3>⏰ ${t('rem_t')}</h3><div class="chips"><button class="chip" data-act="remon" aria-pressed="${!!R.on}">${R.on?t('rem_on'):t('rem_off')}</button></div>${REMK.map(k=>`<div class="w-row" style="margin:8px 0"><b style="min-width:64px">${t('m_'+k)}</b><span class="muted">${t('rem_from')}</span>${ti(k,0)}<span class="muted">${t('rem_to')}</span>${ti(k,1)}</div>`).join('')}<p class="muted">${t('rem_note')}</p></div>`}
 /* ===== المجسم الجسدي v2: شكل شبه ثلاثي الأبعاد (SVG محلي بدون API) ===== */
-const AVP={sh:[[41,42,42,46,52],[34,35,35,37,40]],ch:[[40,38,35,37,42],[31,30,28,29,31]],wa:[[42,36,30,27,28],[38,32,25,22,23]],hp:[[43,38,33,32,34],[44,40,35,34,36]],t2:[[34,31,27,26,31],[37,33,28,27,29]],tk:[[18,17,15,15,16],[17,16,14,13,14]],tc:[[18,16,14,14,16],[17,15,13,12,13]],ta:[[10,9,8,8,8.5],[9,8,7,7,7.5]],nk:[[12,11,10,10.5,13],[9,8.5,8,8,8.5]],at:[[11,10,8.5,8.5,11],[9.5,8.5,7,6.5,7.5]],gp:[[1,1.5,2,2.5,2],[1,1.5,2,2.5,2]]};
+const AVP={sh:[[41,42,42,46,52],[34,35,35,37,40]],ch:[[40,38,35,37,42],[31,30,28,29,31]],wa:[[42,36,30,27,28],[38,32,25,22,23]],hp:[[43,38,33,32,34],[44,40,35,34,36]],t2:[[38,34,29,28,33],[41,36,30,29,31]],tk:[[19,18,16,16,17],[18,17,15,14,15]],tc:[[19.5,17.5,15.5,15.5,17.5],[18.5,16.5,14.5,13.5,14.5]],ta:[[10,9,8,8,8.5],[9,8,7,7,7.5]],nk:[[12,11,10,10.5,13],[9,8.5,8,8,8.5]],at:[[11,10,8.5,8.5,11],[9.5,8.5,7,6.5,7.5]],gp:[[1,1.5,2,2.5,2],[1,1.5,2,2.5,2]]};
 const bz=p=>{let d='';for(let i=0;i<p.length-1;i++){const a=p[Math.max(0,i-1)],b=p[i],c=p[i+1],e=p[Math.min(p.length-1,i+2)];d+=`C${(b[0]+(c[0]-a[0])/6).toFixed(1)} ${(b[1]+(c[1]-a[1])/6).toFixed(1)} ${(c[0]-(e[0]-b[0])/6).toFixed(1)} ${(c[1]-(e[1]-b[1])/6).toFixed(1)} ${c[0].toFixed(1)} ${c[1].toFixed(1)}`}return d};
 let AVU=0;
 function bodySvg(lv,sex,w,det){const f=sex==='f'?1:0,g=k=>AVP[k][f][lv],u='av'+(++AVU),C=100,sh=g('sh'),ch=g('ch'),wa=g('wa'),hp=g('hp'),t2=g('t2'),tk=g('tk'),tc=g('tc'),ta=g('ta'),nk=g('nk'),at=g('at'),gp=g('gp'),bel=lv===0?4:lv===1?1.5:0,BASE='#9aa7bb';
