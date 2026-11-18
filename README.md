@@ -1,19 +1,31 @@
-# رفع FitPlan على GitHub
+# FitPlan — fit plan for everyone
 
-## الملفات
-- `index.html`: كود التطبيق.
-- `assets/`: الصور والخلفيات التي يستدعيها التطبيق.
+تطبيق لياقة شامل ثنائي اللغة (عربي/إنجليزي): مكتبة تمارين بالعضلات، خطط تمرين ذكية، كتالوج أكل، سجل تقدم وإنجازات — ملف واحد standalone يشتغل من المتصفح.
 
-يجب أن يظل `index.html` ومجلد `assets` في المستوى نفسه. لا تغيّر أسماء ملفات الصور أو تنقلها خارج المجلد.
+**🔗 اللينك الشغال:** https://hassanmu208.github.io/fit-plan/
 
-## الرفع باستخدام GitHub Desktop
-1. فك ضغط `FitPlan-GitHub-Upload.zip`.
-2. أنشئ مستودعًا جديدًا على GitHub.
-3. في GitHub Desktop اختر **File → Clone Repository** ثم اختر المستودع الجديد.
-4. انسخ `index.html` ومجلد `assets` من المجلد الذي فككت ضغطه إلى مجلد المستودع المحلي.
-5. في GitHub Desktop اكتب رسالة مثل `Add FitPlan app`, ثم اختر **Commit to main** وبعدها **Push origin**.
+## هيكل المشروع
 
-## نشره كموقع
-بعد رفع الملفات، افتح المستودع على GitHub ثم **Settings → Pages**. تحت **Build and deployment** اختر **Deploy from a branch**، ثم الفرع `main` والمجلد `/(root)`، واضغط **Save**. سيظهر رابط الموقع في صفحة Pages بعد اكتمال النشر.
+```
+├── index.html        ← التطبيق المبني (ملف واحد، كل الوسائط مدمجة base64)
+├── src/              ← المصدر القابل للصيانة
+│   ├── shell.html    ← قالب الصفحة بفتحات الدمج
+│   ├── scripts/      ← منطق التطبيق (JavaScript مرقّم بالترتيب)
+│   ├── styles/       ← ملفات CSS
+│   └── assets/       ← صور/فريمات التمارين والخرائط العضلية
+├── manifest.json     ← يحدد أي بلوك يندمج فين وأي أصل يتحوّل لـ base64
+├── build.ps1         ← سكريبت البناء
+└── tools/            ← سكريبتات مساعدة لمرة واحدة
+```
 
-يمكنك أيضًا فتح المستودع على GitHub واختيار **Add file → Upload files**، ثم رفع `index.html` ومجلد `assets` مع الحفاظ على هيكل المجلدات.
+## البناء
+
+```powershell
+powershell -ExecutionPolicy Bypass -File build.ps1
+```
+
+بيجمع `src/` حسب `manifest.json` ويطلع `preview/fitplan.html`. للنشر انسخها على `index.html` في الجذر واعمل push — GitHub Pages بتنشر من `main / (root)` تلقائيًا.
+
+## الاستضافة
+
+GitHub Pages — Branch: `main`, Folder: `/(root)`

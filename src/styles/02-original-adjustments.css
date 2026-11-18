@@ -1,0 +1,92 @@
+    /* FitPlan interaction motion: brief, consistent, and theme-neutral. */
+    @keyframes ft-screen-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes ft-accordion-enter { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes ft-toast-enter { from { opacity: 0; transform: translateY(-10px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    @keyframes ft-modal-backdrop { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes ft-modal-enter { from { opacity: 0; transform: translateY(10px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    #app.anim > * { animation: ft-screen-enter 600ms cubic-bezier(.2,.75,.25,1) both; }
+    #app details[open] > :not(summary) { animation: ft-accordion-enter 900ms cubic-bezier(.2,.75,.25,1) both; }
+    .btn, .chip, .ruler-nudge, #nav button { transition: transform 160ms ease, filter 160ms ease, box-shadow 180ms ease, background-color 180ms ease, border-color 180ms ease; }
+    .btn:active, .chip:active, .ruler-nudge:active, #nav button:active { transform: scale(.97); }
+    #app .onb-heading .bar i { transition: width 360ms cubic-bezier(.2,.75,.25,1); }
+    .toast { animation: ft-toast-enter 200ms cubic-bezier(.2,.75,.25,1) both; }
+    .cmw { animation: ft-modal-backdrop 180ms ease-out both; }
+    .cmw .cm { animation: ft-modal-enter 220ms cubic-bezier(.2,.75,.25,1) both; }
+    @media (prefers-reduced-motion: reduce) {
+      #app.anim > *, #app details[open] > :not(summary), .toast, .cmw, .cmw .cm { animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+      .btn, .chip, .ruler-nudge, #nav button, #app .onb-heading .bar i { transition-duration: .01ms !important; }
+    }    /* Prevent accidental text selection and long-press callouts in the app UI. */
+    body, body * { -webkit-user-select: none !important; user-select: none !important; -webkit-touch-callout: none; }
+    input, textarea, select, [contenteditable="true"], [contenteditable=""] { -webkit-user-select: text !important; user-select: text !important; -webkit-touch-callout: default; }    /* Keep the welcome card centered and let the brand image show through it. */
+    body:has(#app[data-flow="welcome"]) > main { width: 100%; min-height: 100vh; min-height: 100svh; }
+    #app[data-flow="welcome"] { width: 100%; min-height: 100vh; min-height: 100svh; }
+    #app[data-flow="welcome"] .welcome-cover { box-sizing: border-box; width: 100%; min-height: 100vh; min-height: 100svh; align-items: center; justify-content: center; }
+    #app[data-flow="welcome"] .welcome-content { text-align: center; background: rgba(8,8,12,.38); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); }
+    #app[data-flow="welcome"] .welcome-languages { justify-content: center; }
+    #app[data-flow="welcome"] .welcome-content h2, #app[data-flow="welcome"] .welcome-content p { text-shadow: 0 1px 8px rgba(0,0,0,.5); }    /* Theme-aware foreground colors for small data labels and preference states. */
+    :root {
+      --ft-metric-blue: #3ea6ff;
+      --ft-metric-amber: #ffb020;
+      --ft-metric-pink: #ff5fa2;
+      --ft-pref-like: #2ee6a6;
+      --ft-pref-neutral: #ffd166;
+      --ft-pref-dislike: #ff6b47;
+    }
+    :root[data-theme="light"] {
+      --ft-metric-blue: #1d4ed8;
+      --ft-metric-amber: #805500;
+      --ft-metric-pink: #b4235a;
+      --ft-pref-like: #067647;
+      --ft-pref-neutral: #805500;
+      --ft-pref-dislike: #b93820;
+    }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme="dark"]) {
+        --ft-metric-blue: #1d4ed8;
+        --ft-metric-amber: #805500;
+        --ft-metric-pink: #b4235a;
+        --ft-pref-like: #067647;
+        --ft-pref-neutral: #805500;
+        --ft-pref-dislike: #b93820;
+      }
+    }
+    .stats div:nth-child(2) b { color: var(--ft-metric-blue); }
+    .stats div:nth-child(3) b { color: var(--ft-metric-amber); }
+    .stats div:nth-child(4) b { color: var(--ft-metric-pink); }
+    .food.pfav, .chip.pref.pfav {
+      color: var(--ft-pref-like);
+      background: color-mix(in srgb, var(--ft-pref-like) 12%, var(--card));
+      border-color: color-mix(in srgb, var(--ft-pref-like) 42%, var(--border));
+    }
+    .food.pneu, .chip.pref.pneu {
+      color: var(--ft-pref-neutral);
+      background: color-mix(in srgb, var(--ft-pref-neutral) 12%, var(--card));
+      border-color: color-mix(in srgb, var(--ft-pref-neutral) 42%, var(--border));
+    }
+    .food.pdis, .chip.pref.pdis {
+      color: var(--ft-pref-dislike);
+      background: color-mix(in srgb, var(--ft-pref-dislike) 12%, var(--card));
+      border-color: color-mix(in srgb, var(--ft-pref-dislike) 42%, var(--border));
+    }
+    .chip[aria-pressed="true"], .set[aria-pressed="true"], .chip[style*="--c"][aria-pressed="true"] { color: var(--onacc, #0d0d12); }
+    .home-macro-heading { color: var(--text); }
+    .home-macro-heading span { color: var(--muted); }
+    .home-water-actions .home-water-primary { color: var(--onacc, #0d0d12); }
+    #app[data-flow="onboarding"] .ruler-nudge:active { color: var(--onacc, #0d0d12); }
+    input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; }
+    select, option { color: var(--text); background-color: var(--card2); }
+    :root[data-theme="dark"] { color-scheme: dark; }
+    :root[data-theme="light"] { color-scheme: light; }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { color-scheme: dark; } }
+    /* Keep onboarding food preference cards readable in every theme. */
+    #app[data-flow="onboarding"] .fc-pref-main,
+    #app[data-flow="onboarding"] .fc-pref-sub { color: var(--text); background-color: var(--card); }
+    #app[data-flow="onboarding"] .fc-pref-main > summary,
+    #app[data-flow="onboarding"] .fc-pref-sub > summary { color: var(--text); }
+    #app[data-flow="onboarding"] .fc-pref-food { color: var(--text); background-color: var(--card); border-color: var(--border); }
+    #app[data-flow="onboarding"] .fc-pref-food small,
+    #app[data-flow="onboarding"] .fc-pref-legend span { color: var(--muted); opacity: 1; }
+    #app[data-flow="onboarding"] .fc-pref-green { border-inline-start-color: var(--ft-pref-like); }
+    #app[data-flow="onboarding"] .fc-pref-yellow { border-inline-start-color: var(--ft-pref-neutral); }
+    #app[data-flow="onboarding"] .fc-pref-red { border-inline-start-color: var(--ft-pref-dislike); }
+    @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { color-scheme: light; } }
