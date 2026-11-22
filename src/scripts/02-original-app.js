@@ -1976,6 +1976,7 @@ dn|dn6|فول وطحينة بالعيش|Fava and tahini with bread|foul:.45,bala
         });
         setInterval(() => { if (S.tmode === 'auto') applyTheme() }, 300000);
         setInterval(() => { try { remCheck() } catch (e) { } }, 60000);
+        setInterval(() => { document.querySelectorAll('.exercise-anim').forEach(el => { if (el.offsetParent) el.classList.toggle('on') }) }, 1050);
         load(); applyLab(); S.units = Object.assign({ w: 'kg', g: 'g', h: 'cm' }, S.units || {}); S.profile.diet = S.profile.diet || 'normal'; S.profile.labs = S.profile.labs || [];
         if (S.plan && S.plan.plan && !S.plan.blocked && S.plan.pv !== 11) { try { const ps = S.plan.start || S.pstart, nx = gen(); if (!nx.blocked) { S.plan = nx; if (ps) { S.plan.start = ps; S.pstart = ps } } } catch (e) { } }
         if (S.plan && S.plan.plan) { const ti = TRD().indexOf(new Date().getDay()); if (ti >= 0) { S.day = ti; S.dayRest = false } else if (S.view === 'plan') S.dayRest = true }
