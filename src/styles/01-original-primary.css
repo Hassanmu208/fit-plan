@@ -690,6 +690,8 @@
         input[type=date],
         input[type=time] {
             width: 100%;
+            min-width: 0;
+            max-width: 100%;
             height: 44px;
             min-height: 44px;
             background: var(--card2);
