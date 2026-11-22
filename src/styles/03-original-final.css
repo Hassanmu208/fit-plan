@@ -278,3 +278,5 @@ details.phase-card[open]>summary{margin-bottom:10px}
 .sub-ring-low{--ringc:#ff5f5f}
 @keyframes subringspin{to{--subra:360deg}}
 @media(prefers-reduced-motion:reduce){.card.sub-ring{animation:none}}
+.bkrow{flex-wrap:nowrap}
+.bkrow>.btn{flex:1;min-width:0;justify-content:center;text-align:center;white-space:nowrap;padding-inline:8px}
