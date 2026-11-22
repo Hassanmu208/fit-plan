@@ -702,12 +702,40 @@
             box-sizing: border-box
         }
 
-        @supports (-webkit-touch-callout: none) {
-            input[type=date],
-            input[type=time] {
-                -webkit-appearance: textfield;
-                appearance: textfield
-            }
+        .dw {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 44px;
+            min-height: 44px;
+            background: var(--card2);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 0 12px;
+            margin-top: 4px;
+            box-sizing: border-box;
+            overflow: hidden
+        }
+
+        .dw .dwv {
+            font-size: .9rem;
+            color: var(--text)
+        }
+
+        .dw .dwv.ph {
+            color: var(--muted)
+        }
+
+        .dw input[type=date] {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            opacity: 0
         }
 
         body {
