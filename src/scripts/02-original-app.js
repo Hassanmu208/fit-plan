@@ -574,6 +574,7 @@ kfore|stretch|stretch|gdb|wrist||إطالة ساعد راكعة|Kneeling Forearm
             cabletwist: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_282__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_283__' },
             drevcrunch: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_284__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_285__' },
             pallof: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_286__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_287__' },
+            pike: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_732__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_733__' },
             sidebend: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_288__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_289__' },
             jkknife: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_290__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_291__' },
             ballcrunch: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_292__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_293__' },
@@ -793,10 +794,11 @@ kfore|stretch|stretch|gdb|wrist||إطالة ساعد راكعة|Kneeling Forearm
             kbiceps: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_726__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_727__' },
             kfore: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_728__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_729__' },
                     pallof: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_730__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_731__' },
+            pike: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_734__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_735__' },
         };
         const exFramesById = id => (S.profile.sex === 'f' && EX_FRAMES_F[id]) || EX_FRAMES[id];
         const exMediaKey = id => (S.profile.sex === 'f' ? id + '#f' : id);
-        const EX_MEDIA_URLS = new Map(), EX_MEDIA_SAVED = new Set(), EX_MEDIA_PENDING = new Set(), EX_MEDIA_VER = 2;
+        const EX_MEDIA_URLS = new Map(), EX_MEDIA_SAVED = new Set(), EX_MEDIA_PENDING = new Set(), EX_MEDIA_VER = 3;
         const chestMediaDb = () => new Promise((resolve, reject) => { try { const req = indexedDB.open('fitplan-exercise-media', 1); req.onupgradeneeded = () => { if (!req.result.objectStoreNames.contains('media')) req.result.createObjectStore('media') }; req.onsuccess = () => resolve(req.result); req.onerror = () => reject(req.error) } catch (e) { reject(e) } });
         function chestMediaGetAll() { return chestMediaDb().then(db => new Promise((resolve, reject) => { const tx = db.transaction('media', 'readonly'), rq = tx.objectStore('media').getAll(); rq.onsuccess = () => resolve(rq.result || []); rq.onerror = () => reject(rq.error); tx.oncomplete = () => db.close(); tx.onerror = () => { db.close(); reject(tx.error) } })) }
         function chestMediaWrite(id, value) { return chestMediaDb().then(db => new Promise((resolve, reject) => { const tx = db.transaction('media', 'readwrite'); tx.objectStore('media').put(value, id); tx.oncomplete = () => { db.close(); resolve() }; tx.onerror = () => { db.close(); reject(tx.error) } })) }

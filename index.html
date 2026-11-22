@@ -3228,6 +3228,7 @@ kfore|stretch|stretch|gdb|wrist||إطالة ساعد راكعة|Kneeling Forearm
             cabletwist: { a: 'src/assets/ex-cabletwist-0.jpg', b: 'src/assets/ex-cabletwist-1.jpg' },
             drevcrunch: { a: 'src/assets/ex-drevcrunch-0.jpg', b: 'src/assets/ex-drevcrunch-1.jpg' },
             pallof: { a: 'src/assets/ex-pallof-0.jpg', b: 'src/assets/ex-pallof-1.jpg' },
+            pike: { a: 'src/assets/ex-pike-0.jpg', b: 'src/assets/ex-pike-1.jpg' },
             sidebend: { a: 'src/assets/ex-sidebend-0.jpg', b: 'src/assets/ex-sidebend-1.jpg' },
             jkknife: { a: 'src/assets/ex-jkknife-0.jpg', b: 'src/assets/ex-jkknife-1.jpg' },
             ballcrunch: { a: 'src/assets/ex-ballcrunch-0.jpg', b: 'src/assets/ex-ballcrunch-1.jpg' },
@@ -3447,10 +3448,11 @@ kfore|stretch|stretch|gdb|wrist||إطالة ساعد راكعة|Kneeling Forearm
             kbiceps: { a: 'src/assets/exf-kbiceps-0.jpg', b: 'src/assets/exf-kbiceps-1.jpg' },
             kfore: { a: 'src/assets/exf-kfore-0.jpg', b: 'src/assets/exf-kfore-1.jpg' },
                     pallof: { a: 'src/assets/exf-pallof-0.jpg', b: 'src/assets/exf-pallof-1.jpg' },
+            pike: { a: 'src/assets/exf-pike-0.jpg', b: 'src/assets/exf-pike-1.jpg' },
         };
         const exFramesById = id => (S.profile.sex === 'f' && EX_FRAMES_F[id]) || EX_FRAMES[id];
         const exMediaKey = id => (S.profile.sex === 'f' ? id + '#f' : id);
-        const EX_MEDIA_URLS = new Map(), EX_MEDIA_SAVED = new Set(), EX_MEDIA_PENDING = new Set(), EX_MEDIA_VER = 2;
+        const EX_MEDIA_URLS = new Map(), EX_MEDIA_SAVED = new Set(), EX_MEDIA_PENDING = new Set(), EX_MEDIA_VER = 3;
         const chestMediaDb = () => new Promise((resolve, reject) => { try { const req = indexedDB.open('fitplan-exercise-media', 1); req.onupgradeneeded = () => { if (!req.result.objectStoreNames.contains('media')) req.result.createObjectStore('media') }; req.onsuccess = () => resolve(req.result); req.onerror = () => reject(req.error) } catch (e) { reject(e) } });
         function chestMediaGetAll() { return chestMediaDb().then(db => new Promise((resolve, reject) => { const tx = db.transaction('media', 'readonly'), rq = tx.objectStore('media').getAll(); rq.onsuccess = () => resolve(rq.result || []); rq.onerror = () => reject(rq.error); tx.oncomplete = () => db.close(); tx.onerror = () => { db.close(); reject(tx.error) } })) }
         function chestMediaWrite(id, value) { return chestMediaDb().then(db => new Promise((resolve, reject) => { const tx = db.transaction('media', 'readwrite'); tx.objectStore('media').put(value, id); tx.oncomplete = () => { db.close(); resolve() }; tx.onerror = () => { db.close(); reject(tx.error) } })) }

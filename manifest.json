@@ -3745,6 +3745,26 @@
             "token": "__FITPLAN_ASSET_731__",
             "file": "assets/exf-pallof-1.jpg",
             "mime": "jpeg"
+        },
+        {
+            "token": "__FITPLAN_ASSET_732__",
+            "file": "assets/ex-pike-0.jpg",
+            "mime": "jpeg"
+        },
+        {
+            "token": "__FITPLAN_ASSET_733__",
+            "file": "assets/ex-pike-1.jpg",
+            "mime": "jpeg"
+        },
+        {
+            "token": "__FITPLAN_ASSET_734__",
+            "file": "assets/exf-pike-0.jpg",
+            "mime": "jpeg"
+        },
+        {
+            "token": "__FITPLAN_ASSET_735__",
+            "file": "assets/exf-pike-1.jpg",
+            "mime": "jpeg"
         }
-]
+    ]
 }
