@@ -3272,6 +3272,183 @@ kfore|stretch|stretch|gdb|wrist||إطالة ساعد راكعة|Kneeling Forearm
             kbiceps: { a: 'src/assets/ex-kbiceps-0.jpg', b: 'src/assets/ex-kbiceps-1.jpg' },
             kfore: { a: 'src/assets/ex-kfore-0.jpg', b: 'src/assets/ex-kfore-1.jpg' }
         };
+        const EX_FRAMES_F = {
+            bench: { a: 'src/assets/exf-bench-0.jpg', b: 'src/assets/exf-bench-1.jpg' },
+            decline: { a: 'src/assets/exf-decline-0.jpg', b: 'src/assets/exf-decline-1.jpg' },
+            incl: { a: 'src/assets/exf-incl-0.jpg', b: 'src/assets/exf-incl-1.jpg' },
+            dbflat: { a: 'src/assets/exf-dbflat-0.jpg', b: 'src/assets/exf-dbflat-1.jpg' },
+            dbdecl: { a: 'src/assets/exf-dbdecl-0.jpg', b: 'src/assets/exf-dbdecl-1.jpg' },
+            dbfly: { a: 'src/assets/exf-dbfly-0.jpg', b: 'src/assets/exf-dbfly-1.jpg' },
+            dbflyincl: { a: 'src/assets/exf-dbflyincl-0.jpg', b: 'src/assets/exf-dbflyincl-1.jpg' },
+            smbench: { a: 'src/assets/exf-smbench-0.jpg', b: 'src/assets/exf-smbench-1.jpg' },
+            mchest: { a: 'src/assets/exf-mchest-0.jpg', b: 'src/assets/exf-mchest-1.jpg' },
+            mincl: { a: 'src/assets/exf-mincl-0.jpg', b: 'src/assets/exf-mincl-1.jpg' },
+            mdecl: { a: 'src/assets/exf-mdecl-0.jpg', b: 'src/assets/exf-mdecl-1.jpg' },
+            pec: { a: 'src/assets/exf-pec-0.jpg', b: 'src/assets/exf-pec-1.jpg' },
+            cross: { a: 'src/assets/exf-cross-0.jpg', b: 'src/assets/exf-cross-1.jpg' },
+            crosshigh: { a: 'src/assets/exf-crosshigh-0.jpg', b: 'src/assets/exf-crosshigh-1.jpg' },
+            crosslow: { a: 'src/assets/exf-crosslow-0.jpg', b: 'src/assets/exf-crosslow-1.jpg' },
+            cpress: { a: 'src/assets/exf-cpress-0.jpg', b: 'src/assets/exf-cpress-1.jpg' },
+            bandpress: { a: 'src/assets/exf-bandpress-0.jpg', b: 'src/assets/exf-bandpress-1.jpg' },
+            bandfly: { a: 'src/assets/exf-bandfly-0.jpg', b: 'src/assets/exf-bandfly-1.jpg' },
+            pushup: { a: 'src/assets/exf-pushup-0.jpg', b: 'src/assets/exf-pushup-1.jpg' },
+            pushincl: { a: 'src/assets/exf-pushincl-0.jpg', b: 'src/assets/exf-pushincl-1.jpg' },
+            pushdecl: { a: 'src/assets/exf-pushdecl-0.jpg', b: 'src/assets/exf-pushdecl-1.jpg' },
+            pushknees: { a: 'src/assets/exf-pushknees-0.jpg', b: 'src/assets/exf-pushknees-1.jpg' },
+            chestdip: { a: 'src/assets/exf-chestdip-0.jpg', b: 'src/assets/exf-chestdip-1.jpg' },
+            pullup: { a: 'src/assets/exf-pullup-0.jpg', b: 'src/assets/exf-pullup-1.jpg' },
+            chinup: { a: 'src/assets/exf-chinup-0.jpg', b: 'src/assets/exf-chinup-1.jpg' },
+            apull: { a: 'src/assets/exf-apull-0.jpg', b: 'src/assets/exf-apull-1.jpg' },
+            pd: { a: 'src/assets/exf-pd-0.jpg', b: 'src/assets/exf-pd-1.jpg' },
+            cpd: { a: 'src/assets/exf-cpd-0.jpg', b: 'src/assets/exf-cpd-1.jpg' },
+            vpull: { a: 'src/assets/exf-vpull-0.jpg', b: 'src/assets/exf-vpull-1.jpg' },
+            brow: { a: 'src/assets/exf-brow-0.jpg', b: 'src/assets/exf-brow-1.jpg' },
+            rgrow: { a: 'src/assets/exf-rgrow-0.jpg', b: 'src/assets/exf-rgrow-1.jpg' },
+            smrow: { a: 'src/assets/exf-smrow-0.jpg', b: 'src/assets/exf-smrow-1.jpg' },
+            tbar: { a: 'src/assets/exf-tbar-0.jpg', b: 'src/assets/exf-tbar-1.jpg' },
+            landrow: { a: 'src/assets/exf-landrow-0.jpg', b: 'src/assets/exf-landrow-1.jpg' },
+            crow: { a: 'src/assets/exf-crow-0.jpg', b: 'src/assets/exf-crow-1.jpg' },
+            mrow: { a: 'src/assets/exf-mrow-0.jpg', b: 'src/assets/exf-mrow-1.jpg' },
+            cable: { a: 'src/assets/exf-cable-0.jpg', b: 'src/assets/exf-cable-1.jpg' },
+            srow: { a: 'src/assets/exf-srow-0.jpg', b: 'src/assets/exf-srow-1.jpg' },
+            row: { a: 'src/assets/exf-row-0.jpg', b: 'src/assets/exf-row-1.jpg' },
+            invrow: { a: 'src/assets/exf-invrow-0.jpg', b: 'src/assets/exf-invrow-1.jpg' },
+            sarm: { a: 'src/assets/exf-sarm-0.jpg', b: 'src/assets/exf-sarm-1.jpg' },
+            pullover: { a: 'src/assets/exf-pullover-0.jpg', b: 'src/assets/exf-pullover-1.jpg' },
+            shrug: { a: 'src/assets/exf-shrug-0.jpg', b: 'src/assets/exf-shrug-1.jpg' },
+            bshrug: { a: 'src/assets/exf-bshrug-0.jpg', b: 'src/assets/exf-bshrug-1.jpg' },
+            hyper: { a: 'src/assets/exf-hyper-0.jpg', b: 'src/assets/exf-hyper-1.jpg' },
+            rhyper: { a: 'src/assets/exf-rhyper-0.jpg', b: 'src/assets/exf-rhyper-1.jpg' },
+            gm: { a: 'src/assets/exf-gm-0.jpg', b: 'src/assets/exf-gm-1.jpg' },
+            renegade: { a: 'src/assets/exf-renegade-0.jpg', b: 'src/assets/exf-renegade-1.jpg' },
+            sup: { a: 'src/assets/exf-sup-0.jpg', b: 'src/assets/exf-sup-1.jpg' },
+            ohp: { a: 'src/assets/exf-ohp-0.jpg', b: 'src/assets/exf-ohp-1.jpg' },
+            dbpress: { a: 'src/assets/exf-dbpress-0.jpg', b: 'src/assets/exf-dbpress-1.jpg' },
+            arnold: { a: 'src/assets/exf-arnold-0.jpg', b: 'src/assets/exf-arnold-1.jpg' },
+            mpress: { a: 'src/assets/exf-mpress-0.jpg', b: 'src/assets/exf-mpress-1.jpg' },
+            smithohp: { a: 'src/assets/exf-smithohp-0.jpg', b: 'src/assets/exf-smithohp-1.jpg' },
+            pushpress: { a: 'src/assets/exf-pushpress-0.jpg', b: 'src/assets/exf-pushpress-1.jpg' },
+            jammer: { a: 'src/assets/exf-jammer-0.jpg', b: 'src/assets/exf-jammer-1.jpg' },
+            hspu: { a: 'src/assets/exf-hspu-0.jpg', b: 'src/assets/exf-hspu-1.jpg' },
+            frontraise: { a: 'src/assets/exf-frontraise-0.jpg', b: 'src/assets/exf-frontraise-1.jpg' },
+            cablelat: { a: 'src/assets/exf-cablelat-0.jpg', b: 'src/assets/exf-cablelat-1.jpg' },
+            bandlat: { a: 'src/assets/exf-bandlat-0.jpg', b: 'src/assets/exf-bandlat-1.jpg' },
+            lat: { a: 'src/assets/exf-lat-0.jpg', b: 'src/assets/exf-lat-1.jpg' },
+            rdelt: { a: 'src/assets/exf-rdelt-0.jpg', b: 'src/assets/exf-rdelt-1.jpg' },
+            facep: { a: 'src/assets/exf-facep-0.jpg', b: 'src/assets/exf-facep-1.jpg' },
+            revpec: { a: 'src/assets/exf-revpec-0.jpg', b: 'src/assets/exf-revpec-1.jpg' },
+            cablerdelt: { a: 'src/assets/exf-cablerdelt-0.jpg', b: 'src/assets/exf-cablerdelt-1.jpg' },
+            upright: { a: 'src/assets/exf-upright-0.jpg', b: 'src/assets/exf-upright-1.jpg' },
+            curl: { a: 'src/assets/exf-curl-0.jpg', b: 'src/assets/exf-curl-1.jpg' },
+            ezcurl: { a: 'src/assets/exf-ezcurl-0.jpg', b: 'src/assets/exf-ezcurl-1.jpg' },
+            bcurl: { a: 'src/assets/exf-bcurl-0.jpg', b: 'src/assets/exf-bcurl-1.jpg' },
+            inccurl: { a: 'src/assets/exf-inccurl-0.jpg', b: 'src/assets/exf-inccurl-1.jpg' },
+            conccurl: { a: 'src/assets/exf-conccurl-0.jpg', b: 'src/assets/exf-conccurl-1.jpg' },
+            mchncurl: { a: 'src/assets/exf-mchncurl-0.jpg', b: 'src/assets/exf-mchncurl-1.jpg' },
+            spider: { a: 'src/assets/exf-spider-0.jpg', b: 'src/assets/exf-spider-1.jpg' },
+            hammer: { a: 'src/assets/exf-hammer-0.jpg', b: 'src/assets/exf-hammer-1.jpg' },
+            zottman: { a: 'src/assets/exf-zottman-0.jpg', b: 'src/assets/exf-zottman-1.jpg' },
+            revcurl: { a: 'src/assets/exf-revcurl-0.jpg', b: 'src/assets/exf-revcurl-1.jpg' },
+            ccurl: { a: 'src/assets/exf-ccurl-0.jpg', b: 'src/assets/exf-ccurl-1.jpg' },
+            preach: { a: 'src/assets/exf-preach-0.jpg', b: 'src/assets/exf-preach-1.jpg' },
+            tri: { a: 'src/assets/exf-tri-0.jpg', b: 'src/assets/exf-tri-1.jpg' },
+            ropepd: { a: 'src/assets/exf-ropepd-0.jpg', b: 'src/assets/exf-ropepd-1.jpg' },
+            skull: { a: 'src/assets/exf-skull-0.jpg', b: 'src/assets/exf-skull-1.jpg' },
+            ohext: { a: 'src/assets/exf-ohext-0.jpg', b: 'src/assets/exf-ohext-1.jpg' },
+            cboh: { a: 'src/assets/exf-cboh-0.jpg', b: 'src/assets/exf-cboh-1.jpg' },
+            kickback: { a: 'src/assets/exf-kickback-0.jpg', b: 'src/assets/exf-kickback-1.jpg' },
+            bandtri: { a: 'src/assets/exf-bandtri-0.jpg', b: 'src/assets/exf-bandtri-1.jpg' },
+            dipm: { a: 'src/assets/exf-dipm-0.jpg', b: 'src/assets/exf-dipm-1.jpg' },
+            benchdip: { a: 'src/assets/exf-benchdip-0.jpg', b: 'src/assets/exf-benchdip-1.jpg' },
+            cgpress: { a: 'src/assets/exf-cgpress-0.jpg', b: 'src/assets/exf-cgpress-1.jpg' },
+            dip: { a: 'src/assets/exf-dip-0.jpg', b: 'src/assets/exf-dip-1.jpg' },
+            diamond: { a: 'src/assets/exf-diamond-0.jpg', b: 'src/assets/exf-diamond-1.jpg' },
+            squat: { a: 'src/assets/exf-squat-0.jpg', b: 'src/assets/exf-squat-1.jpg' },
+            gob: { a: 'src/assets/exf-gob-0.jpg', b: 'src/assets/exf-gob-1.jpg' },
+            lp: { a: 'src/assets/exf-lp-0.jpg', b: 'src/assets/exf-lp-1.jpg' },
+            hack: { a: 'src/assets/exf-hack-0.jpg', b: 'src/assets/exf-hack-1.jpg' },
+            ext: { a: 'src/assets/exf-ext-0.jpg', b: 'src/assets/exf-ext-1.jpg' },
+            lunge: { a: 'src/assets/exf-lunge-0.jpg', b: 'src/assets/exf-lunge-1.jpg' },
+            bsq: { a: 'src/assets/exf-bsq-0.jpg', b: 'src/assets/exf-bsq-1.jpg' },
+            dl: { a: 'src/assets/exf-dl-0.jpg', b: 'src/assets/exf-dl-1.jpg' },
+            rdl: { a: 'src/assets/exf-rdl-0.jpg', b: 'src/assets/exf-rdl-1.jpg' },
+            lcurl: { a: 'src/assets/exf-lcurl-0.jpg', b: 'src/assets/exf-lcurl-1.jpg' },
+            bridge: { a: 'src/assets/exf-bridge-0.jpg', b: 'src/assets/exf-bridge-1.jpg' },
+            hip: { a: 'src/assets/exf-hip-0.jpg', b: 'src/assets/exf-hip-1.jpg' },
+            kb: { a: 'src/assets/exf-kb-0.jpg', b: 'src/assets/exf-kb-1.jpg' },
+            calf: { a: 'src/assets/exf-calf-0.jpg', b: 'src/assets/exf-calf-1.jpg' },
+            scalf: { a: 'src/assets/exf-scalf-0.jpg', b: 'src/assets/exf-scalf-1.jpg' },
+            frsq: { a: 'src/assets/exf-frsq-0.jpg', b: 'src/assets/exf-frsq-1.jpg' },
+            ssplit: { a: 'src/assets/exf-ssplit-0.jpg', b: 'src/assets/exf-ssplit-1.jpg' },
+            wlunge: { a: 'src/assets/exf-wlunge-0.jpg', b: 'src/assets/exf-wlunge-1.jpg' },
+            stepup: { a: 'src/assets/exf-stepup-0.jpg', b: 'src/assets/exf-stepup-1.jpg' },
+            jsquat: { a: 'src/assets/exf-jsquat-0.jpg', b: 'src/assets/exf-jsquat-1.jpg' },
+            dsplit: { a: 'src/assets/exf-dsplit-0.jpg', b: 'src/assets/exf-dsplit-1.jpg' },
+            ballcurl: { a: 'src/assets/exf-ballcurl-0.jpg', b: 'src/assets/exf-ballcurl-1.jpg' },
+            nordic: { a: 'src/assets/exf-nordic-0.jpg', b: 'src/assets/exf-nordic-1.jpg' },
+            donkey: { a: 'src/assets/exf-donkey-0.jpg', b: 'src/assets/exf-donkey-1.jpg' },
+            lpcalf: { a: 'src/assets/exf-lpcalf-0.jpg', b: 'src/assets/exf-lpcalf-1.jpg' },
+            badduct: { a: 'src/assets/exf-badduct-0.jpg', b: 'src/assets/exf-badduct-1.jpg' },
+            mwalk: { a: 'src/assets/exf-mwalk-0.jpg', b: 'src/assets/exf-mwalk-1.jpg' },
+            flutter: { a: 'src/assets/exf-flutter-0.jpg', b: 'src/assets/exf-flutter-1.jpg' },
+            plank: { a: 'src/assets/exf-plank-0.jpg', b: 'src/assets/exf-plank-1.jpg' },
+            dead: { a: 'src/assets/exf-dead-0.jpg', b: 'src/assets/exf-dead-1.jpg' },
+            hleg: { a: 'src/assets/exf-hleg-0.jpg', b: 'src/assets/exf-hleg-1.jpg' },
+            lleg: { a: 'src/assets/exf-lleg-0.jpg', b: 'src/assets/exf-lleg-1.jpg' },
+            ccrunch: { a: 'src/assets/exf-ccrunch-0.jpg', b: 'src/assets/exf-ccrunch-1.jpg' },
+            chop: { a: 'src/assets/exf-chop-0.jpg', b: 'src/assets/exf-chop-1.jpg' },
+            roll: { a: 'src/assets/exf-roll-0.jpg', b: 'src/assets/exf-roll-1.jpg' },
+            crunch: { a: 'src/assets/exf-crunch-0.jpg', b: 'src/assets/exf-crunch-1.jpg' },
+            dcrunch: { a: 'src/assets/exf-dcrunch-0.jpg', b: 'src/assets/exf-dcrunch-1.jpg' },
+            airbike: { a: 'src/assets/exf-airbike-0.jpg', b: 'src/assets/exf-airbike-1.jpg' },
+            cabletwist: { a: 'src/assets/exf-cabletwist-0.jpg', b: 'src/assets/exf-cabletwist-1.jpg' },
+            drevcrunch: { a: 'src/assets/exf-drevcrunch-0.jpg', b: 'src/assets/exf-drevcrunch-1.jpg' },
+            sidebend: { a: 'src/assets/exf-sidebend-0.jpg', b: 'src/assets/exf-sidebend-1.jpg' },
+            jkknife: { a: 'src/assets/exf-jkknife-0.jpg', b: 'src/assets/exf-jkknife-1.jpg' },
+            ballcrunch: { a: 'src/assets/exf-ballcrunch-0.jpg', b: 'src/assets/exf-ballcrunch-1.jpg' },
+            starjump: { a: 'src/assets/exf-starjump-0.jpg', b: 'src/assets/exf-starjump-1.jpg' },
+            armcirc: { a: 'src/assets/exf-armcirc-0.jpg', b: 'src/assets/exf-armcirc-1.jpg' },
+            shcirc: { a: 'src/assets/exf-shcirc-0.jpg', b: 'src/assets/exf-shcirc-1.jpg' },
+            legswing: { a: 'src/assets/exf-legswing-0.jpg', b: 'src/assets/exf-legswing-1.jpg' },
+            hipcirc: { a: 'src/assets/exf-hipcirc-0.jpg', b: 'src/assets/exf-hipcirc-1.jpg' },
+            twistor: { a: 'src/assets/exf-twistor-0.jpg', b: 'src/assets/exf-twistor-1.jpg' },
+            anklec: { a: 'src/assets/exf-anklec-0.jpg', b: 'src/assets/exf-anklec-1.jpg' },
+            kneec: { a: 'src/assets/exf-kneec-0.jpg', b: 'src/assets/exf-kneec-1.jpg' },
+            fastskip: { a: 'src/assets/exf-fastskip-0.jpg', b: 'src/assets/exf-fastskip-1.jpg' },
+            buttkick: { a: 'src/assets/exf-buttkick-0.jpg', b: 'src/assets/exf-buttkick-1.jpg' },
+            mclimb: { a: 'src/assets/exf-mclimb-0.jpg', b: 'src/assets/exf-mclimb-1.jpg' },
+            wgreat: { a: 'src/assets/exf-wgreat-0.jpg', b: 'src/assets/exf-wgreat-1.jpg' },
+            inchworm: { a: 'src/assets/exf-inchworm-0.jpg', b: 'src/assets/exf-inchworm-1.jpg' },
+            groiners: { a: 'src/assets/exf-groiners-0.jpg', b: 'src/assets/exf-groiners-1.jpg' },
+            catcow: { a: 'src/assets/exf-catcow-0.jpg', b: 'src/assets/exf-catcow-1.jpg' },
+            dynchest: { a: 'src/assets/exf-dynchest-0.jpg', b: 'src/assets/exf-dynchest-1.jpg' },
+            windmill: { a: 'src/assets/exf-windmill-0.jpg', b: 'src/assets/exf-windmill-1.jpg' },
+            sttoe: { a: 'src/assets/exf-sttoe-0.jpg', b: 'src/assets/exf-sttoe-1.jpg' },
+            lyham: { a: 'src/assets/exf-lyham-0.jpg', b: 'src/assets/exf-lyham-1.jpg' },
+            sham: { a: 'src/assets/exf-sham-0.jpg', b: 'src/assets/exf-sham-1.jpg' },
+            qstretch: { a: 'src/assets/exf-qstretch-0.jpg', b: 'src/assets/exf-qstretch-1.jpg' },
+            lyglute: { a: 'src/assets/exf-lyglute-0.jpg', b: 'src/assets/exf-lyglute-1.jpg' },
+            khipflex: { a: 'src/assets/exf-khipflex-0.jpg', b: 'src/assets/exf-khipflex-1.jpg' },
+            wcalf: { a: 'src/assets/exf-wcalf-0.jpg', b: 'src/assets/exf-wcalf-1.jpg' },
+            soleus: { a: 'src/assets/exf-soleus-0.jpg', b: 'src/assets/exf-soleus-1.jpg' },
+            bgroin: { a: 'src/assets/exf-bgroin-0.jpg', b: 'src/assets/exf-bgroin-1.jpg' },
+            oneknee: { a: 'src/assets/exf-oneknee-0.jpg', b: 'src/assets/exf-oneknee-1.jpg' },
+            itband: { a: 'src/assets/exf-itband-0.jpg', b: 'src/assets/exf-itband-1.jpg' },
+            fchest: { a: 'src/assets/exf-fchest-0.jpg', b: 'src/assets/exf-fchest-1.jpg' },
+            olat: { a: 'src/assets/exf-olat-0.jpg', b: 'src/assets/exf-olat-1.jpg' },
+            tristretch: { a: 'src/assets/exf-tristretch-0.jpg', b: 'src/assets/exf-tristretch-1.jpg' },
+            shstretch: { a: 'src/assets/exf-shstretch-0.jpg', b: 'src/assets/exf-shstretch-1.jpg' },
+            sneck: { a: 'src/assets/exf-sneck-0.jpg', b: 'src/assets/exf-sneck-1.jpg' },
+            chinchest: { a: 'src/assets/exf-chinchest-0.jpg', b: 'src/assets/exf-chinchest-1.jpg' },
+            childs: { a: 'src/assets/exf-childs-0.jpg', b: 'src/assets/exf-childs-1.jpg' },
+            spinal: { a: 'src/assets/exf-spinal-0.jpg', b: 'src/assets/exf-spinal-1.jpg' },
+            latlateral: { a: 'src/assets/exf-latlateral-0.jpg', b: 'src/assets/exf-latlateral-1.jpg' },
+            midback: { a: 'src/assets/exf-midback-0.jpg', b: 'src/assets/exf-midback-1.jpg' },
+            kbiceps: { a: 'src/assets/exf-kbiceps-0.jpg', b: 'src/assets/exf-kbiceps-1.jpg' },
+            kfore: { a: 'src/assets/exf-kfore-0.jpg', b: 'src/assets/exf-kfore-1.jpg' },
+        };
+        const exFramesById = id => (S.profile.sex === 'f' && EX_FRAMES_F[id]) || EX_FRAMES[id];
+        const exMediaKey = id => (S.profile.sex === 'f' ? id + '#f' : id);
         const EX_MEDIA_URLS = new Map(), EX_MEDIA_SAVED = new Set(), EX_MEDIA_PENDING = new Set();
         const chestMediaDb = () => new Promise((resolve, reject) => { try { const req = indexedDB.open('fitplan-exercise-media', 1); req.onupgradeneeded = () => { if (!req.result.objectStoreNames.contains('media')) req.result.createObjectStore('media') }; req.onsuccess = () => resolve(req.result); req.onerror = () => reject(req.error) } catch (e) { reject(e) } });
         function chestMediaGetAll() { return chestMediaDb().then(db => new Promise((resolve, reject) => { const tx = db.transaction('media', 'readonly'), rq = tx.objectStore('media').getAll(); rq.onsuccess = () => resolve(rq.result || []); rq.onerror = () => reject(rq.error); tx.oncomplete = () => db.close(); tx.onerror = () => { db.close(); reject(tx.error) } })) }
@@ -3279,12 +3456,12 @@ kfore|stretch|stretch|gdb|wrist||إطالة ساعد راكعة|Kneeling Forearm
         function chestMediaDelete(id) { return chestMediaDb().then(db => new Promise((resolve, reject) => { const tx = db.transaction('media', 'readwrite'); tx.objectStore('media').delete(id); tx.oncomplete = () => { db.close(); resolve() }; tx.onerror = () => { db.close(); reject(tx.error) } })) }
         async function chestAssetBlob(src) { if (src.startsWith('data:')) { const [meta, b64] = src.split(','); const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0)); return new Blob([bytes], { type: (meta.match(/data:([^;]+)/) || [])[1] || 'application/octet-stream' }) } const r = await fetch(src); return r.blob() }
         function exMediaUrls(x) { const urls = {}; for (const k of ['map', 'a', 'b', 'gif']) { const blob = x[k] || (k === 'map' ? x.muscleMap : null); if (blob instanceof Blob) urls[k] = URL.createObjectURL(blob) } return urls }
-        function chestMediaRestore() { return chestMediaGetAll().then(items => { items.forEach(x => { if (!x || !x.id) return; const urls = exMediaUrls(x); if (!Object.keys(urls).length) return; EX_MEDIA_SAVED.add(x.id); EX_MEDIA_URLS.set(x.id, urls) }) }) }
-        async function chestMediaSaveOne(id) { const e = EXM[id], frames = EX_FRAMES[id], mapAsset = MEDIA_MAPS[e ? mapKind(e) : 'press'], payload = { id, map: await chestAssetBlob(mapAsset), savedAt: Date.now() }; for (const k of ['a', 'b', 'gif']) if (frames[k]) payload[k] = await chestAssetBlob(frames[k]); await chestMediaWrite(id, payload); EX_MEDIA_SAVED.add(id); const old = EX_MEDIA_URLS.get(id); if (old) for (const u of Object.values(old)) URL.revokeObjectURL(u); EX_MEDIA_URLS.set(id, exMediaUrls(payload)) }
-        async function chestMediaDownload(id) { const frames = EX_FRAMES[id]; if (!frames || EX_MEDIA_PENDING.has(id)) return; EX_MEDIA_PENDING.add(id); render(); try { await chestMediaSaveOne(id) } finally { EX_MEDIA_PENDING.delete(id); render() } }
+        function chestMediaRestore() { return chestMediaGetAll().then(items => { items.forEach(x => { if (!x || !x.id) return; if ((x.sex || 'm') !== (S.profile.sex === 'f' ? 'f' : 'm')) return; const urls = exMediaUrls(x); if (!Object.keys(urls).length) return; EX_MEDIA_SAVED.add(x.id); EX_MEDIA_URLS.set(x.id, urls) }) }) }
+        async function chestMediaSaveOne(id) { const e = EXM[id], key = exMediaKey(id), frames = exFramesById(id), mapAsset = MEDIA_MAPS[e ? mapKind(e) : 'press'], payload = { id: key, sex: S.profile.sex === 'f' ? 'f' : 'm', map: await chestAssetBlob(mapAsset), savedAt: Date.now() }; for (const k of ['a', 'b', 'gif']) if (frames[k]) payload[k] = await chestAssetBlob(frames[k]); await chestMediaWrite(key, payload); EX_MEDIA_SAVED.add(key); const old = EX_MEDIA_URLS.get(key); if (old) for (const u of Object.values(old)) URL.revokeObjectURL(u); EX_MEDIA_URLS.set(key, exMediaUrls(payload)) }
+        async function chestMediaDownload(id) { const frames = exFramesById(id); if (!frames || EX_MEDIA_PENDING.has(id)) return; EX_MEDIA_PENDING.add(id); render(); try { await chestMediaSaveOne(id) } finally { EX_MEDIA_PENDING.delete(id); render() } }
         let EX_MEDIA_BULK = null;
-        async function chestMediaDownloadGroup(ids, btn) { const todo = ids.map(id => EXM[id]).filter(e => e && EX_FRAMES[e.id] && !EX_MEDIA_SAVED.has(e.id) && !EX_MEDIA_PENDING.has(e.id)); if (!todo.length || EX_MEDIA_BULK) return; EX_MEDIA_BULK = { total: todo.length, done: 0, failed: 0 }; if (btn) { btn.disabled = true; btn.textContent = `0/${nf(todo.length)}` } for (const e of todo) { EX_MEDIA_PENDING.add(e.id); try { await chestMediaSaveOne(e.id) } catch (x) { EX_MEDIA_BULK.failed++ } EX_MEDIA_PENDING.delete(e.id); EX_MEDIA_BULK.done++; if (btn && btn.isConnected) btn.textContent = `${nf(EX_MEDIA_BULK.done)}/${nf(EX_MEDIA_BULK.total)}` } const failed = EX_MEDIA_BULK.failed; EX_MEDIA_BULK = null; render(); if (failed) alert(S.lang === 'ar' ? 'تعذر حفظ بعض الصور. تأكد من مساحة التخزين وحاول مرة أخرى.' : 'Some images could not be saved. Check available storage and try again.') }
-        async function chestMediaRemove(id) { await chestMediaDelete(id); EX_MEDIA_SAVED.delete(id); const old = EX_MEDIA_URLS.get(id); if (old) for (const u of Object.values(old)) URL.revokeObjectURL(u); EX_MEDIA_URLS.delete(id); render() }
+        async function chestMediaDownloadGroup(ids, btn) { const todo = ids.map(id => EXM[id]).filter(e => e && exFramesById(e.id) && !EX_MEDIA_SAVED.has(exMediaKey(e.id)) && !EX_MEDIA_PENDING.has(e.id)); if (!todo.length || EX_MEDIA_BULK) return; EX_MEDIA_BULK = { total: todo.length, done: 0, failed: 0 }; if (btn) { btn.disabled = true; btn.textContent = `0/${nf(todo.length)}` } for (const e of todo) { EX_MEDIA_PENDING.add(e.id); try { await chestMediaSaveOne(e.id) } catch (x) { EX_MEDIA_BULK.failed++ } EX_MEDIA_PENDING.delete(e.id); EX_MEDIA_BULK.done++; if (btn && btn.isConnected) btn.textContent = `${nf(EX_MEDIA_BULK.done)}/${nf(EX_MEDIA_BULK.total)}` } const failed = EX_MEDIA_BULK.failed; EX_MEDIA_BULK = null; render(); if (failed) alert(S.lang === 'ar' ? 'تعذر حفظ بعض الصور. تأكد من مساحة التخزين وحاول مرة أخرى.' : 'Some images could not be saved. Check available storage and try again.') }
+        async function chestMediaRemove(id) { const key = exMediaKey(id); await chestMediaDelete(key); EX_MEDIA_SAVED.delete(key); const old = EX_MEDIA_URLS.get(key); if (old) for (const u of Object.values(old)) URL.revokeObjectURL(u); EX_MEDIA_URLS.delete(key); render() }
         const TP = {
             3: ['full@90:squat/3/8-12,bench/3/8-12,brow/3/8-12,ohp/3/8-12,curl/2/10-12,tri/2/10-12,plank/3/45s', 'full@90:rdl/3/8-12,incl/3/8-12,pd/3/8-12,dbpress/3/10-12,lunge/3/12,hammer/2/12,ccrunch/3/15', 'full@90:lp/3/10-15,mchest/3/10-12,crow/3/10-12,lat/3/12-15,hip/3/10-12,skull/2/12,hleg/3/12'],
             4: ['upper@75:bench/3/6-12,brow/3/6-12,dbpress/3/8-12,pec/2/10-12,pd/2/10-12,lat/2/10-15,tri/3/8-12,ccurl/3/8-12', 'lower@75:squat/3/6-12,rdl/3/8-12,calf/3/10-15,ext/2/10-12,lcurl/2/10-12,scalf/2/10-12,ccrunch/3/10-12', 'upper@75:incl/3/8-12,pullup/2/8-12,ohp/3/8-12,mchest/2/8-12,crow/2/8-12,curl/3/8-12,dip/3/8-12,facep/3/15', 'lower@75:lp/3/10-20,rdl/3/8-12,calf/3/10-15,hack/2/8-12,lcurl/2/10-12,scalf/2/10-12,plank/3/60s,hyper/3/10-12'],
@@ -3378,7 +3555,7 @@ kfore|stretch|stretch|gdb|wrist||إطالة ساعد راكعة|Kneeling Forearm
         function estimateSession(d, p = S.profile) { let exec = 0, rests = 0; const restSec = Math.max(30, Math.min(180, +d.rest || 75)); (d.ex || []).forEach(id => { const sets = Math.max(1, spec(d, id)[0]), reps = repSeconds((d.sr && d.sr[id] || [3, '10-12'])[1]); exec += sets * reps; rests += Math.max(0, sets - 1) * restSec }); const warm = 6, cool = 5, transitions = Math.max(0, (d.ex || []).length - 1) * .75; exec /= 60; rests /= 60; return { warm, exec, rests, transitions, cool, total: Math.round(warm + cool + exec + rests + transitions) } }
         function sessionDetails(d) { const q = estimateSession(d), target = +S.profile.dur || 60; return '<div class="card session-est"><b>' + t('session_est', { n: nf(q.total), target: nf(target) }) + '</b><p class="muted">' + t('session_parts', { warm: nf(q.warm), work: nf(q.exec, 1), rest: nf(q.rests, 1), move: nf(q.transitions, 1), cool: nf(q.cool) }) + '</p><p class="muted">' + t('duration_target_note') + '</p></div>' }
         function dayPhase(d, di, kind) { const saved = d[kind]; if (saved && saved.length) return saved; return pickPhase(kind, d.ex, phaseCount(kind, S.profile.dur), di, S.profile) }
-        function phaseInfo(e) { const D = EXD[e.id] || MD[e.m] || MD.core, ar = S.lang === 'ar'; return (EX_FRAMES[e.id] ? exerciseMedia(e) : '') + `<ol class="muted" style="padding-inline-start:18px;margin:6px 0">${D[ar ? 0 : 2].split('|').map(x => `<li>${x}</li>`).join('')}</ol><p class="muted"><b>${t('mistake')}:</b> ${D[ar ? 1 : 3]}</p><a href="${yt(e)}" target="_blank" rel="noopener">${t('watch')}</a>` }
+        function phaseInfo(e) { const D = EXD[e.id] || MD[e.m] || MD.core, ar = S.lang === 'ar'; return (exFramesById(e.id) ? exerciseMedia(e) : '') + `<ol class="muted" style="padding-inline-start:18px;margin:6px 0">${D[ar ? 0 : 2].split('|').map(x => `<li>${x}</li>`).join('')}</ol><p class="muted"><b>${t('mistake')}:</b> ${D[ar ? 1 : 3]}</p><a href="${yt(e)}" target="_blank" rel="noopener">${t('watch')}</a>` }
         function phaseCard(d, di, kind, open) { const items = dayPhase(d, di, kind).map(id => EXM[id]).filter(Boolean), injured = (S.profile.inj || []).some(x => x !== 'none'), hint = injured ? t(kind + '_adapt') : t(kind + '_hint'); return `<details class="card warmcool phase-card"${open ? ' open' : ''}><summary><b>${kind === 'warm' ? '🔥' : '🧘'} ${t(kind + '_title')} · ${nf(items.length)} ${t('ex_n')}</b></summary>${items.map(e => `<details class="ex phase" style="--c:${kind === 'warm' ? '#ff8c47' : '#4fc9a8'}"><summary>${esc(e.n[S.lang])}<span class="muted">${t(kind + '_dose')}</span></summary><div class="exb">${phaseInfo(e)}</div></details>`).join('')}<p class="muted">${hint}</p></details>` }
         function warmCard(d) { const key = (S.profile.inj || []).some(x => x !== 'none') ? 'warm_adapt' : 'warm_' + (({ push: 'push', chest: 'push', shoulders: 'push', arms: 'push', pull: 'pull', back: 'pull', legs: 'legs', lower: 'legs', upper: 'upper', full: 'full' })[d.ty] || 'full'); return '<div class="card warmcool"><h3>🔥 ' + t('warm_title') + '</h3><p>' + t(key) + '</p></div>' }
         function coolCard(d) { const injured = (S.profile.inj || []).some(x => x !== 'none'); return '<div class="card warmcool"><h3>🧘 ' + t('cool_title') + '</h3><p>' + t(injured ? 'cool_adapt' : 'cool_text') + '</p></div>' }
@@ -4190,14 +4367,14 @@ dn|dn6|فول وطحينة بالعيش|Fava and tahini with bread|foul:.45,bala
         function altsOf(e) { const pref = S.profile.eqPref || 'mix', ok = CAT_GROUP[pref] || null, match = z => ok && ok.includes(exCat(z)) ? 1 : 0; return [EXM[e.alt], ...EX.filter(z => z.m === e.m)].filter((z, i, a) => z && z.id !== e.id && a.indexOf(z) === i && okEq(z, S.profile.place)).sort((x, y) => match(y) - match(x)).slice(0, 6) }
         function exInfo(e, dayType, dayIndex) {
             const D = EXD[e.id] || MD[e.m] || MD.core, ar = S.lang === 'ar', al = altsOf(e, dayType);
-            return (EX_FRAMES[e.id] ? exerciseMedia(e) : '') + `<ol class="muted" style="padding-inline-start:18px;margin:6px 0">${D[ar ? 0 : 2].split('|').map(x => `<li>${x}</li>`).join('')}</ol><p class="muted"><b>${t('mistake')}:</b> ${D[ar ? 1 : 3]}</p>` + (al.length ? `<details class="alts"><summary>⇄ ${t('alts')} · ${nf(al.length)}</summary>` + al.map(a => `<div class="w-row" style="margin:4px 0"><span style="flex:1;font-size:.8rem">${esc(a.n[S.lang])}<small class="muted" style="display:block">${esc(GEAR_LBL[exCat(a)] ? GEAR_LBL[exCat(a)][S.lang === 'ar' ? 0 : 1] : '')}</small></span><a href="${yt(a)}" target="_blank" rel="noopener" aria-label="${t('watch')}">▶</a><button class="chip" data-act="useAlt" data-k="${e.id}" data-v="${a.id}" data-d="${dayIndex}" ${Number.isInteger(dayIndex) ? '' : 'disabled'}>${t('useAlt')}</button></div>`).join('') + `</details>` : '')
+            return (exFramesById(e.id) ? exerciseMedia(e) : '') + `<ol class="muted" style="padding-inline-start:18px;margin:6px 0">${D[ar ? 0 : 2].split('|').map(x => `<li>${x}</li>`).join('')}</ol><p class="muted"><b>${t('mistake')}:</b> ${D[ar ? 1 : 3]}</p>` + (al.length ? `<details class="alts"><summary>⇄ ${t('alts')} · ${nf(al.length)}</summary>` + al.map(a => `<div class="w-row" style="margin:4px 0"><span style="flex:1;font-size:.8rem">${esc(a.n[S.lang])}<small class="muted" style="display:block">${esc(GEAR_LBL[exCat(a)] ? GEAR_LBL[exCat(a)][S.lang === 'ar' ? 0 : 1] : '')}</small></span><a href="${yt(a)}" target="_blank" rel="noopener" aria-label="${t('watch')}">▶</a><button class="chip" data-act="useAlt" data-k="${e.id}" data-v="${a.id}" data-d="${dayIndex}" ${Number.isInteger(dayIndex) ? '' : 'disabled'}>${t('useAlt')}</button></div>`).join('') + `</details>` : '')
         }
         function exMapToggle(e) {
-            const urls = EX_MEDIA_URLS.get(e.id) || {}, kind = mapKind(e), src = urls.map || MEDIA_MAPS[kind];
+            const urls = EX_MEDIA_URLS.get(exMediaKey(e.id)) || {}, kind = mapKind(e), src = urls.map || MEDIA_MAPS[kind];
             return `<details class="exlib-maptog"><summary>${t('exlib_muscles')}</summary><div class="exlib-maprow"><img src="${src}" alt="${t('exlib_muscles')}" loading="lazy" decoding="async"><div class="exlib-maprow-txt"><span>${t('exlib_map_' + kind)}</span></div></div></details>`
         }
         function exerciseMedia(e) {
-            const saved = EX_MEDIA_SAVED.has(e.id), urls = EX_MEDIA_URLS.get(e.id) || {}, frames = EX_FRAMES[e.id], alt = esc(e.n[S.lang]), pending = EX_MEDIA_PENDING.has(e.id);
+            const saved = EX_MEDIA_SAVED.has(exMediaKey(e.id)), urls = EX_MEDIA_URLS.get(exMediaKey(e.id)) || {}, frames = exFramesById(e.id), alt = esc(e.n[S.lang]), pending = EX_MEDIA_PENDING.has(e.id);
             let demo = '';
             if (frames && frames.gif) demo = `<img class="exercise-demo-gif" src="${urls.gif || frames.gif}" alt="${alt}" loading="lazy" decoding="async">`;
             else if (frames) demo = `<div class="exercise-anim" role="img" aria-label="${alt}"><img src="${urls.a || frames.a}" alt="" loading="lazy" decoding="async"><img src="${urls.b || frames.b}" alt="" loading="lazy" decoding="async"></div>`;
@@ -4208,11 +4385,11 @@ dn|dn6|فول وطحينة بالعيش|Fava and tahini with bread|foul:.45,bala
         function renderExerciseLibrary() {
             const q = EXLIB_QUERY.trim().toLocaleLowerCase(), ar = S.lang === 'ar', isArTxt = x => /[\u0600-\u06FF]/.test(x), gearOf = meta => (ar && meta.gear_ar) || meta.gear || '—',
                 pass = e => { const meta = exMeta(e); const searchable = [e.n.ar, e.n.en, meta.gear || '', meta.gear_ar || '', ...(meta.aliases || [])].join(' ').toLocaleLowerCase(); if (q && !searchable.includes(q)) return false; if (EXLIB_MODE === 'all') return true; if (EXLIB_MODE === 'home') return (meta.access || []).includes('home') && meta.cat !== 'body'; if (EXLIB_MODE === 'body') return meta.cat === 'body' || (meta.access || []).includes('body'); return meta.cat === EXLIB_MODE },
-                item = e => { const meta = exMeta(e), gear = gearOf(meta), d = EXD[e.id] || MD[e.m] || MD.core, aliases = (meta.aliases || []).filter(x => x !== e.n.en && x !== e.n.ar && isArTxt(x) === ar), hasMedia = !!EX_FRAMES[e.id], searchable = [e.n.ar, e.n.en, meta.gear || '', meta.gear_ar || '', ...(meta.aliases || [])].join(' ').toLocaleLowerCase(); return `<details class="card exlib-item" data-search="${esc(searchable)}"><summary><span>${esc(e.n[S.lang])}</span><small>${esc(gear)}</small></summary><div class="exlib-body"><div class="exlib-meta"><span class="exlib-tag"><b>${t('exlib_gear')}</b> ${esc(gear)}</span>${aliases.length ? `<span class="exlib-tag"><b>${t('exlib_aliases')}</b> ${aliases.map(esc).join(ar ? '، ' : ', ')}</span>` : ''}</div>${hasMedia ? exerciseMedia(e) : ''}<section class="exlib-sec"><h4 class="exlib-sec-head">${t('exlib_steps')}</h4><ol class="muted">${d[ar ? 0 : 2].split('|').map(x => `<li>${esc(x)}</li>`).join('')}</ol></section><div class="exlib-mistake"><b>${t('mistake')}:</b> ${esc(d[ar ? 1 : 3])}</div><a class="chip" href="${yt(e)}" target="_blank" rel="noopener">▶ ${t('exlib_video')}</a></div></details>` },
+                item = e => { const meta = exMeta(e), gear = gearOf(meta), d = EXD[e.id] || MD[e.m] || MD.core, aliases = (meta.aliases || []).filter(x => x !== e.n.en && x !== e.n.ar && isArTxt(x) === ar), hasMedia = !!exFramesById(e.id), searchable = [e.n.ar, e.n.en, meta.gear || '', meta.gear_ar || '', ...(meta.aliases || [])].join(' ').toLocaleLowerCase(); return `<details class="card exlib-item" data-search="${esc(searchable)}"><summary><span>${esc(e.n[S.lang])}</span><small>${esc(gear)}</small></summary><div class="exlib-body"><div class="exlib-meta"><span class="exlib-tag"><b>${t('exlib_gear')}</b> ${esc(gear)}</span>${aliases.length ? `<span class="exlib-tag"><b>${t('exlib_aliases')}</b> ${aliases.map(esc).join(ar ? '، ' : ', ')}</span>` : ''}</div>${hasMedia ? exerciseMedia(e) : ''}<section class="exlib-sec"><h4 class="exlib-sec-head">${t('exlib_steps')}</h4><ol class="muted">${d[ar ? 0 : 2].split('|').map(x => `<li>${esc(x)}</li>`).join('')}</ol></section><div class="exlib-mistake"><b>${t('mistake')}:</b> ${esc(d[ar ? 1 : 3])}</div><a class="chip" href="${yt(e)}" target="_blank" rel="noopener">▶ ${t('exlib_video')}</a></div></details>` },
                 filtering = !!q || EXLIB_MODE !== 'all',
                 groups = EXLIB_MUSCLES.map((ms, gi) => { const items = EX.filter(e => ms.includes(e.m) && pass(e)); return { ms, items, open: filtering || gi === 0 } }).filter(g => g.items.length);
             const modeButtons = [['all', t('exlib_all')], ['machine', t('exlib_machines')], ['barbell', t('exlib_barbell')], ['dumbbell', t('exlib_dumbbells')], ['cable', t('exlib_cables')], ['home', t('exlib_home')], ['body', t('exlib_body')]].map(([v, n]) => `<button class="chip" data-act="exmode" data-v="${v}" aria-pressed="${EXLIB_MODE === v}">${n}</button>`).join('');
-            return `<h2>${t('exlib_title')}</h2><p class="muted">${t('exlib_desc')}</p><div class="exlib-tools"><div class="searchbar"><span class="searchbar-ic">${ico('search', 'control')}</span><input type="search" data-exlib-search placeholder="${t('exlib_search')}" aria-label="${t('exlib_search')}" value="${esc(EXLIB_QUERY)}" autocomplete="off"><button type="button" class="searchbar-go" data-act="exlib-go">${t('search_go')}</button></div><div class="chips">${modeButtons}</div></div><div class="exlib-groups">${groups.map(g => { const withMedia = g.items.filter(e => EX_FRAMES[e.id]), savedN = withMedia.filter(e => EX_MEDIA_SAVED.has(e.id)).length, allSaved = withMedia.length > 0 && savedN === withMedia.length, saveBtn = withMedia.length ? `<button type="button" class="chip exlib-saveall${allSaved ? ' saved' : ''}" data-act="exlib-saveall" data-k="${withMedia.map(e => e.id).join(',')}" title="${allSaved ? t('exlib_allsaved') : t('exlib_saveall')}"${allSaved || EX_MEDIA_BULK ? ' disabled' : ''}>${allSaved ? '● ' + nf(savedN) + '/' + nf(withMedia.length) : '↓ ' + t('exlib_saveall') + ' · ' + nf(savedN) + '/' + nf(withMedia.length)}</button>` : ''; return `<details class="card exlib-group"${g.open ? ' open' : ''}><summary><span>${t('exlib_mg_' + g.ms[0])}</span><span class="exlib-group-side">${saveBtn}<small>${nf(g.items.length)}</small></span></summary><div class="exlib-list">${g.items.map(item).join('')}</div></details>` }).join('')}<p class="muted exlib-noresults"${groups.length ? ' hidden' : ''}>${t('exlib_noresults')}</p></div>`
+            return `<h2>${t('exlib_title')}</h2><p class="muted">${t('exlib_desc')}</p><div class="exlib-tools"><div class="searchbar"><span class="searchbar-ic">${ico('search', 'control')}</span><input type="search" data-exlib-search placeholder="${t('exlib_search')}" aria-label="${t('exlib_search')}" value="${esc(EXLIB_QUERY)}" autocomplete="off"><button type="button" class="searchbar-go" data-act="exlib-go">${t('search_go')}</button></div><div class="chips">${modeButtons}</div></div><div class="exlib-groups">${groups.map(g => { const withMedia = g.items.filter(e => exFramesById(e.id)), savedN = withMedia.filter(e => EX_MEDIA_SAVED.has(exMediaKey(e.id))).length, allSaved = withMedia.length > 0 && savedN === withMedia.length, saveBtn = withMedia.length ? `<button type="button" class="chip exlib-saveall${allSaved ? ' saved' : ''}" data-act="exlib-saveall" data-k="${withMedia.map(e => e.id).join(',')}" title="${allSaved ? t('exlib_allsaved') : t('exlib_saveall')}"${allSaved || EX_MEDIA_BULK ? ' disabled' : ''}>${allSaved ? '● ' + nf(savedN) + '/' + nf(withMedia.length) : '↓ ' + t('exlib_saveall') + ' · ' + nf(savedN) + '/' + nf(withMedia.length)}</button>` : ''; return `<details class="card exlib-group"${g.open ? ' open' : ''}><summary><span>${t('exlib_mg_' + g.ms[0])}</span><span class="exlib-group-side">${saveBtn}<small>${nf(g.items.length)}</small></span></summary><div class="exlib-list">${g.items.map(item).join('')}</div></details>` }).join('')}<p class="muted exlib-noresults"${groups.length ? ' hidden' : ''}>${t('exlib_noresults')}</p></div>`
         }
         Object.assign(CO.ar, { first: ['أول تمرين ليك يا {name}! بداية جامدة', 'اتحركت! أول خطوة اتعملت.'], water: ['تمام كده، المية بتفرق في الأداء والتركيز', 'كمّل شرب على مدار اليوم.'], meal: ['وجبة اتسجلت، الالتزام بيبني النتيجة', 'برافو، كمّل على نفس النظام.'], ach: ['إنجاز جديد! تعبك ظاهر', 'عاش يا {name}، ده إنجاز حقيقي.'], new: ['أهلاً يا {name}! أنا حسونة مدربك. نبدأ بأول تمرين؟', 'بداية الطريق دايماً أحلى حاجة. أنا معاك.'], weekly: ['أسبوع كامل من الالتزام! حسونة فخور بيك', 'أسبوع ممتاز يا {name}، كمّل كده.'], loss: ['الميزان بيتحرك في الاتجاه الصح', 'نزلت وزن يا بطل، استمر.'], gain: ['وزنك بيزيد بشكل حلو، عضلات جاية', 'تقدم ممتاز في البناء يا {name}.'], streak: ['سلسلة التزام {n} أيام! ماتكسرهاش.', 'التزام تلات أيام ورا بعض أو أكتر، حسونة بيصفقلك.'] });
         Object.assign(CO.en, { new: ["Hi {name}! I'm Hasona, your coach. Ready for workout one?", 'The start is the best part. I am with you.'], weekly: ['A full week of consistency! Hasona is proud', 'Great week {name}, keep going.'], loss: ['The scale is moving the right way!', 'You are losing weight, keep it up.'], gain: ['Your weight is climbing nicely, muscle is coming!', 'Great progress in building {name}.'], streak: ['Consistency streak of {n}+ days! Do not break it.', 'Three or more training days in a row, Hasona applauds.'], first: ['Your first workout {name}! Strong start', 'You moved! First step done.'], water: ['Nice, water helps performance and focus', 'Keep sipping through the day.'], meal: ['Meal logged, consistency builds results', 'Bravo, stay on the plan.'], ach: ['New achievement! Your effort shows', 'Well done {name}, a real milestone.'] });

@@ -618,6 +618,183 @@ kfore|stretch|stretch|gdb|wrist||إطالة ساعد راكعة|Kneeling Forearm
             kbiceps: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_370__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_371__' },
             kfore: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_372__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_373__' }
         };
+        const EX_FRAMES_F = {
+            bench: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_384__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_385__' },
+            decline: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_386__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_387__' },
+            incl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_388__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_389__' },
+            dbflat: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_390__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_391__' },
+            dbdecl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_392__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_393__' },
+            dbfly: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_394__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_395__' },
+            dbflyincl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_396__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_397__' },
+            smbench: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_398__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_399__' },
+            mchest: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_400__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_401__' },
+            mincl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_402__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_403__' },
+            mdecl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_404__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_405__' },
+            pec: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_406__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_407__' },
+            cross: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_408__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_409__' },
+            crosshigh: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_410__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_411__' },
+            crosslow: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_412__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_413__' },
+            cpress: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_414__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_415__' },
+            bandpress: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_416__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_417__' },
+            bandfly: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_418__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_419__' },
+            pushup: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_420__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_421__' },
+            pushincl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_422__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_423__' },
+            pushdecl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_424__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_425__' },
+            pushknees: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_426__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_427__' },
+            chestdip: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_428__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_429__' },
+            pullup: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_430__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_431__' },
+            chinup: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_432__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_433__' },
+            apull: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_434__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_435__' },
+            pd: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_436__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_437__' },
+            cpd: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_438__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_439__' },
+            vpull: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_440__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_441__' },
+            brow: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_442__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_443__' },
+            rgrow: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_444__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_445__' },
+            smrow: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_446__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_447__' },
+            tbar: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_448__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_449__' },
+            landrow: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_450__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_451__' },
+            crow: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_452__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_453__' },
+            mrow: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_454__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_455__' },
+            cable: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_456__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_457__' },
+            srow: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_458__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_459__' },
+            row: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_460__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_461__' },
+            invrow: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_462__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_463__' },
+            sarm: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_464__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_465__' },
+            pullover: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_466__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_467__' },
+            shrug: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_468__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_469__' },
+            bshrug: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_470__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_471__' },
+            hyper: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_472__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_473__' },
+            rhyper: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_474__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_475__' },
+            gm: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_476__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_477__' },
+            renegade: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_478__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_479__' },
+            sup: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_480__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_481__' },
+            ohp: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_482__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_483__' },
+            dbpress: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_484__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_485__' },
+            arnold: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_486__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_487__' },
+            mpress: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_488__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_489__' },
+            smithohp: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_490__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_491__' },
+            pushpress: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_492__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_493__' },
+            jammer: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_494__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_495__' },
+            hspu: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_496__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_497__' },
+            frontraise: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_498__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_499__' },
+            cablelat: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_500__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_501__' },
+            bandlat: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_502__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_503__' },
+            lat: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_504__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_505__' },
+            rdelt: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_506__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_507__' },
+            facep: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_508__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_509__' },
+            revpec: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_510__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_511__' },
+            cablerdelt: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_512__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_513__' },
+            upright: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_514__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_515__' },
+            curl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_516__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_517__' },
+            ezcurl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_518__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_519__' },
+            bcurl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_520__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_521__' },
+            inccurl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_522__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_523__' },
+            conccurl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_524__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_525__' },
+            mchncurl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_526__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_527__' },
+            spider: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_528__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_529__' },
+            hammer: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_530__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_531__' },
+            zottman: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_532__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_533__' },
+            revcurl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_534__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_535__' },
+            ccurl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_536__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_537__' },
+            preach: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_538__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_539__' },
+            tri: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_540__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_541__' },
+            ropepd: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_542__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_543__' },
+            skull: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_544__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_545__' },
+            ohext: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_546__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_547__' },
+            cboh: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_548__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_549__' },
+            kickback: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_550__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_551__' },
+            bandtri: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_552__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_553__' },
+            dipm: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_554__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_555__' },
+            benchdip: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_556__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_557__' },
+            cgpress: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_558__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_559__' },
+            dip: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_560__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_561__' },
+            diamond: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_562__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_563__' },
+            squat: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_564__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_565__' },
+            gob: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_566__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_567__' },
+            lp: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_568__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_569__' },
+            hack: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_570__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_571__' },
+            ext: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_572__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_573__' },
+            lunge: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_574__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_575__' },
+            bsq: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_576__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_577__' },
+            dl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_578__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_579__' },
+            rdl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_580__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_581__' },
+            lcurl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_582__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_583__' },
+            bridge: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_584__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_585__' },
+            hip: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_586__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_587__' },
+            kb: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_588__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_589__' },
+            calf: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_590__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_591__' },
+            scalf: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_592__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_593__' },
+            frsq: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_594__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_595__' },
+            ssplit: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_596__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_597__' },
+            wlunge: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_598__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_599__' },
+            stepup: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_600__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_601__' },
+            jsquat: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_602__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_603__' },
+            dsplit: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_604__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_605__' },
+            ballcurl: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_606__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_607__' },
+            nordic: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_608__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_609__' },
+            donkey: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_610__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_611__' },
+            lpcalf: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_612__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_613__' },
+            badduct: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_614__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_615__' },
+            mwalk: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_616__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_617__' },
+            flutter: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_618__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_619__' },
+            plank: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_620__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_621__' },
+            dead: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_622__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_623__' },
+            hleg: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_624__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_625__' },
+            lleg: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_626__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_627__' },
+            ccrunch: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_628__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_629__' },
+            chop: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_630__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_631__' },
+            roll: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_632__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_633__' },
+            crunch: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_634__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_635__' },
+            dcrunch: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_636__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_637__' },
+            airbike: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_638__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_639__' },
+            cabletwist: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_640__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_641__' },
+            drevcrunch: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_642__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_643__' },
+            sidebend: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_644__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_645__' },
+            jkknife: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_646__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_647__' },
+            ballcrunch: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_648__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_649__' },
+            starjump: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_650__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_651__' },
+            armcirc: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_652__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_653__' },
+            shcirc: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_654__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_655__' },
+            legswing: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_656__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_657__' },
+            hipcirc: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_658__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_659__' },
+            twistor: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_660__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_661__' },
+            anklec: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_662__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_663__' },
+            kneec: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_664__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_665__' },
+            fastskip: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_666__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_667__' },
+            buttkick: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_668__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_669__' },
+            mclimb: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_670__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_671__' },
+            wgreat: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_672__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_673__' },
+            inchworm: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_674__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_675__' },
+            groiners: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_676__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_677__' },
+            catcow: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_678__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_679__' },
+            dynchest: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_680__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_681__' },
+            windmill: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_682__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_683__' },
+            sttoe: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_684__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_685__' },
+            lyham: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_686__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_687__' },
+            sham: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_688__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_689__' },
+            qstretch: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_690__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_691__' },
+            lyglute: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_692__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_693__' },
+            khipflex: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_694__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_695__' },
+            wcalf: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_696__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_697__' },
+            soleus: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_698__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_699__' },
+            bgroin: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_700__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_701__' },
+            oneknee: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_702__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_703__' },
+            itband: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_704__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_705__' },
+            fchest: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_706__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_707__' },
+            olat: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_708__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_709__' },
+            tristretch: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_710__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_711__' },
+            shstretch: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_712__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_713__' },
+            sneck: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_714__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_715__' },
+            chinchest: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_716__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_717__' },
+            childs: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_718__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_719__' },
+            spinal: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_720__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_721__' },
+            latlateral: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_722__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_723__' },
+            midback: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_724__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_725__' },
+            kbiceps: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_726__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_727__' },
+            kfore: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_728__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_729__' },
+        };
+        const exFramesById = id => (S.profile.sex === 'f' && EX_FRAMES_F[id]) || EX_FRAMES[id];
+        const exMediaKey = id => (S.profile.sex === 'f' ? id + '#f' : id);
         const EX_MEDIA_URLS = new Map(), EX_MEDIA_SAVED = new Set(), EX_MEDIA_PENDING = new Set();
         const chestMediaDb = () => new Promise((resolve, reject) => { try { const req = indexedDB.open('fitplan-exercise-media', 1); req.onupgradeneeded = () => { if (!req.result.objectStoreNames.contains('media')) req.result.createObjectStore('media') }; req.onsuccess = () => resolve(req.result); req.onerror = () => reject(req.error) } catch (e) { reject(e) } });
         function chestMediaGetAll() { return chestMediaDb().then(db => new Promise((resolve, reject) => { const tx = db.transaction('media', 'readonly'), rq = tx.objectStore('media').getAll(); rq.onsuccess = () => resolve(rq.result || []); rq.onerror = () => reject(rq.error); tx.oncomplete = () => db.close(); tx.onerror = () => { db.close(); reject(tx.error) } })) }
@@ -625,12 +802,12 @@ kfore|stretch|stretch|gdb|wrist||إطالة ساعد راكعة|Kneeling Forearm
         function chestMediaDelete(id) { return chestMediaDb().then(db => new Promise((resolve, reject) => { const tx = db.transaction('media', 'readwrite'); tx.objectStore('media').delete(id); tx.oncomplete = () => { db.close(); resolve() }; tx.onerror = () => { db.close(); reject(tx.error) } })) }
         async function chestAssetBlob(src) { if (src.startsWith('data:')) { const [meta, b64] = src.split(','); const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0)); return new Blob([bytes], { type: (meta.match(/data:([^;]+)/) || [])[1] || 'application/octet-stream' }) } const r = await fetch(src); return r.blob() }
         function exMediaUrls(x) { const urls = {}; for (const k of ['map', 'a', 'b', 'gif']) { const blob = x[k] || (k === 'map' ? x.muscleMap : null); if (blob instanceof Blob) urls[k] = URL.createObjectURL(blob) } return urls }
-        function chestMediaRestore() { return chestMediaGetAll().then(items => { items.forEach(x => { if (!x || !x.id) return; const urls = exMediaUrls(x); if (!Object.keys(urls).length) return; EX_MEDIA_SAVED.add(x.id); EX_MEDIA_URLS.set(x.id, urls) }) }) }
-        async function chestMediaSaveOne(id) { const e = EXM[id], frames = EX_FRAMES[id], mapAsset = MEDIA_MAPS[e ? mapKind(e) : 'press'], payload = { id, map: await chestAssetBlob(mapAsset), savedAt: Date.now() }; for (const k of ['a', 'b', 'gif']) if (frames[k]) payload[k] = await chestAssetBlob(frames[k]); await chestMediaWrite(id, payload); EX_MEDIA_SAVED.add(id); const old = EX_MEDIA_URLS.get(id); if (old) for (const u of Object.values(old)) URL.revokeObjectURL(u); EX_MEDIA_URLS.set(id, exMediaUrls(payload)) }
-        async function chestMediaDownload(id) { const frames = EX_FRAMES[id]; if (!frames || EX_MEDIA_PENDING.has(id)) return; EX_MEDIA_PENDING.add(id); render(); try { await chestMediaSaveOne(id) } finally { EX_MEDIA_PENDING.delete(id); render() } }
+        function chestMediaRestore() { return chestMediaGetAll().then(items => { items.forEach(x => { if (!x || !x.id) return; if ((x.sex || 'm') !== (S.profile.sex === 'f' ? 'f' : 'm')) return; const urls = exMediaUrls(x); if (!Object.keys(urls).length) return; EX_MEDIA_SAVED.add(x.id); EX_MEDIA_URLS.set(x.id, urls) }) }) }
+        async function chestMediaSaveOne(id) { const e = EXM[id], key = exMediaKey(id), frames = exFramesById(id), mapAsset = MEDIA_MAPS[e ? mapKind(e) : 'press'], payload = { id: key, sex: S.profile.sex === 'f' ? 'f' : 'm', map: await chestAssetBlob(mapAsset), savedAt: Date.now() }; for (const k of ['a', 'b', 'gif']) if (frames[k]) payload[k] = await chestAssetBlob(frames[k]); await chestMediaWrite(key, payload); EX_MEDIA_SAVED.add(key); const old = EX_MEDIA_URLS.get(key); if (old) for (const u of Object.values(old)) URL.revokeObjectURL(u); EX_MEDIA_URLS.set(key, exMediaUrls(payload)) }
+        async function chestMediaDownload(id) { const frames = exFramesById(id); if (!frames || EX_MEDIA_PENDING.has(id)) return; EX_MEDIA_PENDING.add(id); render(); try { await chestMediaSaveOne(id) } finally { EX_MEDIA_PENDING.delete(id); render() } }
         let EX_MEDIA_BULK = null;
-        async function chestMediaDownloadGroup(ids, btn) { const todo = ids.map(id => EXM[id]).filter(e => e && EX_FRAMES[e.id] && !EX_MEDIA_SAVED.has(e.id) && !EX_MEDIA_PENDING.has(e.id)); if (!todo.length || EX_MEDIA_BULK) return; EX_MEDIA_BULK = { total: todo.length, done: 0, failed: 0 }; if (btn) { btn.disabled = true; btn.textContent = `0/${nf(todo.length)}` } for (const e of todo) { EX_MEDIA_PENDING.add(e.id); try { await chestMediaSaveOne(e.id) } catch (x) { EX_MEDIA_BULK.failed++ } EX_MEDIA_PENDING.delete(e.id); EX_MEDIA_BULK.done++; if (btn && btn.isConnected) btn.textContent = `${nf(EX_MEDIA_BULK.done)}/${nf(EX_MEDIA_BULK.total)}` } const failed = EX_MEDIA_BULK.failed; EX_MEDIA_BULK = null; render(); if (failed) alert(S.lang === 'ar' ? 'تعذر حفظ بعض الصور. تأكد من مساحة التخزين وحاول مرة أخرى.' : 'Some images could not be saved. Check available storage and try again.') }
-        async function chestMediaRemove(id) { await chestMediaDelete(id); EX_MEDIA_SAVED.delete(id); const old = EX_MEDIA_URLS.get(id); if (old) for (const u of Object.values(old)) URL.revokeObjectURL(u); EX_MEDIA_URLS.delete(id); render() }
+        async function chestMediaDownloadGroup(ids, btn) { const todo = ids.map(id => EXM[id]).filter(e => e && exFramesById(e.id) && !EX_MEDIA_SAVED.has(exMediaKey(e.id)) && !EX_MEDIA_PENDING.has(e.id)); if (!todo.length || EX_MEDIA_BULK) return; EX_MEDIA_BULK = { total: todo.length, done: 0, failed: 0 }; if (btn) { btn.disabled = true; btn.textContent = `0/${nf(todo.length)}` } for (const e of todo) { EX_MEDIA_PENDING.add(e.id); try { await chestMediaSaveOne(e.id) } catch (x) { EX_MEDIA_BULK.failed++ } EX_MEDIA_PENDING.delete(e.id); EX_MEDIA_BULK.done++; if (btn && btn.isConnected) btn.textContent = `${nf(EX_MEDIA_BULK.done)}/${nf(EX_MEDIA_BULK.total)}` } const failed = EX_MEDIA_BULK.failed; EX_MEDIA_BULK = null; render(); if (failed) alert(S.lang === 'ar' ? 'تعذر حفظ بعض الصور. تأكد من مساحة التخزين وحاول مرة أخرى.' : 'Some images could not be saved. Check available storage and try again.') }
+        async function chestMediaRemove(id) { const key = exMediaKey(id); await chestMediaDelete(key); EX_MEDIA_SAVED.delete(key); const old = EX_MEDIA_URLS.get(key); if (old) for (const u of Object.values(old)) URL.revokeObjectURL(u); EX_MEDIA_URLS.delete(key); render() }
         const TP = {
             3: ['full@90:squat/3/8-12,bench/3/8-12,brow/3/8-12,ohp/3/8-12,curl/2/10-12,tri/2/10-12,plank/3/45s', 'full@90:rdl/3/8-12,incl/3/8-12,pd/3/8-12,dbpress/3/10-12,lunge/3/12,hammer/2/12,ccrunch/3/15', 'full@90:lp/3/10-15,mchest/3/10-12,crow/3/10-12,lat/3/12-15,hip/3/10-12,skull/2/12,hleg/3/12'],
             4: ['upper@75:bench/3/6-12,brow/3/6-12,dbpress/3/8-12,pec/2/10-12,pd/2/10-12,lat/2/10-15,tri/3/8-12,ccurl/3/8-12', 'lower@75:squat/3/6-12,rdl/3/8-12,calf/3/10-15,ext/2/10-12,lcurl/2/10-12,scalf/2/10-12,ccrunch/3/10-12', 'upper@75:incl/3/8-12,pullup/2/8-12,ohp/3/8-12,mchest/2/8-12,crow/2/8-12,curl/3/8-12,dip/3/8-12,facep/3/15', 'lower@75:lp/3/10-20,rdl/3/8-12,calf/3/10-15,hack/2/8-12,lcurl/2/10-12,scalf/2/10-12,plank/3/60s,hyper/3/10-12'],
@@ -724,7 +901,7 @@ kfore|stretch|stretch|gdb|wrist||إطالة ساعد راكعة|Kneeling Forearm
         function estimateSession(d, p = S.profile) { let exec = 0, rests = 0; const restSec = Math.max(30, Math.min(180, +d.rest || 75)); (d.ex || []).forEach(id => { const sets = Math.max(1, spec(d, id)[0]), reps = repSeconds((d.sr && d.sr[id] || [3, '10-12'])[1]); exec += sets * reps; rests += Math.max(0, sets - 1) * restSec }); const warm = 6, cool = 5, transitions = Math.max(0, (d.ex || []).length - 1) * .75; exec /= 60; rests /= 60; return { warm, exec, rests, transitions, cool, total: Math.round(warm + cool + exec + rests + transitions) } }
         function sessionDetails(d) { const q = estimateSession(d), target = +S.profile.dur || 60; return '<div class="card session-est"><b>' + t('session_est', { n: nf(q.total), target: nf(target) }) + '</b><p class="muted">' + t('session_parts', { warm: nf(q.warm), work: nf(q.exec, 1), rest: nf(q.rests, 1), move: nf(q.transitions, 1), cool: nf(q.cool) }) + '</p><p class="muted">' + t('duration_target_note') + '</p></div>' }
         function dayPhase(d, di, kind) { const saved = d[kind]; if (saved && saved.length) return saved; return pickPhase(kind, d.ex, phaseCount(kind, S.profile.dur), di, S.profile) }
-        function phaseInfo(e) { const D = EXD[e.id] || MD[e.m] || MD.core, ar = S.lang === 'ar'; return (EX_FRAMES[e.id] ? exerciseMedia(e) : '') + `<ol class="muted" style="padding-inline-start:18px;margin:6px 0">${D[ar ? 0 : 2].split('|').map(x => `<li>${x}</li>`).join('')}</ol><p class="muted"><b>${t('mistake')}:</b> ${D[ar ? 1 : 3]}</p><a href="${yt(e)}" target="_blank" rel="noopener">${t('watch')}</a>` }
+        function phaseInfo(e) { const D = EXD[e.id] || MD[e.m] || MD.core, ar = S.lang === 'ar'; return (exFramesById(e.id) ? exerciseMedia(e) : '') + `<ol class="muted" style="padding-inline-start:18px;margin:6px 0">${D[ar ? 0 : 2].split('|').map(x => `<li>${x}</li>`).join('')}</ol><p class="muted"><b>${t('mistake')}:</b> ${D[ar ? 1 : 3]}</p><a href="${yt(e)}" target="_blank" rel="noopener">${t('watch')}</a>` }
         function phaseCard(d, di, kind, open) { const items = dayPhase(d, di, kind).map(id => EXM[id]).filter(Boolean), injured = (S.profile.inj || []).some(x => x !== 'none'), hint = injured ? t(kind + '_adapt') : t(kind + '_hint'); return `<details class="card warmcool phase-card"${open ? ' open' : ''}><summary><b>${kind === 'warm' ? '🔥' : '🧘'} ${t(kind + '_title')} · ${nf(items.length)} ${t('ex_n')}</b></summary>${items.map(e => `<details class="ex phase" style="--c:${kind === 'warm' ? '#ff8c47' : '#4fc9a8'}"><summary>${esc(e.n[S.lang])}<span class="muted">${t(kind + '_dose')}</span></summary><div class="exb">${phaseInfo(e)}</div></details>`).join('')}<p class="muted">${hint}</p></details>` }
         function warmCard(d) { const key = (S.profile.inj || []).some(x => x !== 'none') ? 'warm_adapt' : 'warm_' + (({ push: 'push', chest: 'push', shoulders: 'push', arms: 'push', pull: 'pull', back: 'pull', legs: 'legs', lower: 'legs', upper: 'upper', full: 'full' })[d.ty] || 'full'); return '<div class="card warmcool"><h3>🔥 ' + t('warm_title') + '</h3><p>' + t(key) + '</p></div>' }
         function coolCard(d) { const injured = (S.profile.inj || []).some(x => x !== 'none'); return '<div class="card warmcool"><h3>🧘 ' + t('cool_title') + '</h3><p>' + t(injured ? 'cool_adapt' : 'cool_text') + '</p></div>' }
@@ -1536,14 +1713,14 @@ dn|dn6|فول وطحينة بالعيش|Fava and tahini with bread|foul:.45,bala
         function altsOf(e) { const pref = S.profile.eqPref || 'mix', ok = CAT_GROUP[pref] || null, match = z => ok && ok.includes(exCat(z)) ? 1 : 0; return [EXM[e.alt], ...EX.filter(z => z.m === e.m)].filter((z, i, a) => z && z.id !== e.id && a.indexOf(z) === i && okEq(z, S.profile.place)).sort((x, y) => match(y) - match(x)).slice(0, 6) }
         function exInfo(e, dayType, dayIndex) {
             const D = EXD[e.id] || MD[e.m] || MD.core, ar = S.lang === 'ar', al = altsOf(e, dayType);
-            return (EX_FRAMES[e.id] ? exerciseMedia(e) : '') + `<ol class="muted" style="padding-inline-start:18px;margin:6px 0">${D[ar ? 0 : 2].split('|').map(x => `<li>${x}</li>`).join('')}</ol><p class="muted"><b>${t('mistake')}:</b> ${D[ar ? 1 : 3]}</p>` + (al.length ? `<details class="alts"><summary>⇄ ${t('alts')} · ${nf(al.length)}</summary>` + al.map(a => `<div class="w-row" style="margin:4px 0"><span style="flex:1;font-size:.8rem">${esc(a.n[S.lang])}<small class="muted" style="display:block">${esc(GEAR_LBL[exCat(a)] ? GEAR_LBL[exCat(a)][S.lang === 'ar' ? 0 : 1] : '')}</small></span><a href="${yt(a)}" target="_blank" rel="noopener" aria-label="${t('watch')}">▶</a><button class="chip" data-act="useAlt" data-k="${e.id}" data-v="${a.id}" data-d="${dayIndex}" ${Number.isInteger(dayIndex) ? '' : 'disabled'}>${t('useAlt')}</button></div>`).join('') + `</details>` : '')
+            return (exFramesById(e.id) ? exerciseMedia(e) : '') + `<ol class="muted" style="padding-inline-start:18px;margin:6px 0">${D[ar ? 0 : 2].split('|').map(x => `<li>${x}</li>`).join('')}</ol><p class="muted"><b>${t('mistake')}:</b> ${D[ar ? 1 : 3]}</p>` + (al.length ? `<details class="alts"><summary>⇄ ${t('alts')} · ${nf(al.length)}</summary>` + al.map(a => `<div class="w-row" style="margin:4px 0"><span style="flex:1;font-size:.8rem">${esc(a.n[S.lang])}<small class="muted" style="display:block">${esc(GEAR_LBL[exCat(a)] ? GEAR_LBL[exCat(a)][S.lang === 'ar' ? 0 : 1] : '')}</small></span><a href="${yt(a)}" target="_blank" rel="noopener" aria-label="${t('watch')}">▶</a><button class="chip" data-act="useAlt" data-k="${e.id}" data-v="${a.id}" data-d="${dayIndex}" ${Number.isInteger(dayIndex) ? '' : 'disabled'}>${t('useAlt')}</button></div>`).join('') + `</details>` : '')
         }
         function exMapToggle(e) {
-            const urls = EX_MEDIA_URLS.get(e.id) || {}, kind = mapKind(e), src = urls.map || MEDIA_MAPS[kind];
+            const urls = EX_MEDIA_URLS.get(exMediaKey(e.id)) || {}, kind = mapKind(e), src = urls.map || MEDIA_MAPS[kind];
             return `<details class="exlib-maptog"><summary>${t('exlib_muscles')}</summary><div class="exlib-maprow"><img src="${src}" alt="${t('exlib_muscles')}" loading="lazy" decoding="async"><div class="exlib-maprow-txt"><span>${t('exlib_map_' + kind)}</span></div></div></details>`
         }
         function exerciseMedia(e) {
-            const saved = EX_MEDIA_SAVED.has(e.id), urls = EX_MEDIA_URLS.get(e.id) || {}, frames = EX_FRAMES[e.id], alt = esc(e.n[S.lang]), pending = EX_MEDIA_PENDING.has(e.id);
+            const saved = EX_MEDIA_SAVED.has(exMediaKey(e.id)), urls = EX_MEDIA_URLS.get(exMediaKey(e.id)) || {}, frames = exFramesById(e.id), alt = esc(e.n[S.lang]), pending = EX_MEDIA_PENDING.has(e.id);
             let demo = '';
             if (frames && frames.gif) demo = `<img class="exercise-demo-gif" src="${urls.gif || frames.gif}" alt="${alt}" loading="lazy" decoding="async">`;
             else if (frames) demo = `<div class="exercise-anim" role="img" aria-label="${alt}"><img src="${urls.a || frames.a}" alt="" loading="lazy" decoding="async"><img src="${urls.b || frames.b}" alt="" loading="lazy" decoding="async"></div>`;
@@ -1554,11 +1731,11 @@ dn|dn6|فول وطحينة بالعيش|Fava and tahini with bread|foul:.45,bala
         function renderExerciseLibrary() {
             const q = EXLIB_QUERY.trim().toLocaleLowerCase(), ar = S.lang === 'ar', isArTxt = x => /[\u0600-\u06FF]/.test(x), gearOf = meta => (ar && meta.gear_ar) || meta.gear || '—',
                 pass = e => { const meta = exMeta(e); const searchable = [e.n.ar, e.n.en, meta.gear || '', meta.gear_ar || '', ...(meta.aliases || [])].join(' ').toLocaleLowerCase(); if (q && !searchable.includes(q)) return false; if (EXLIB_MODE === 'all') return true; if (EXLIB_MODE === 'home') return (meta.access || []).includes('home') && meta.cat !== 'body'; if (EXLIB_MODE === 'body') return meta.cat === 'body' || (meta.access || []).includes('body'); return meta.cat === EXLIB_MODE },
-                item = e => { const meta = exMeta(e), gear = gearOf(meta), d = EXD[e.id] || MD[e.m] || MD.core, aliases = (meta.aliases || []).filter(x => x !== e.n.en && x !== e.n.ar && isArTxt(x) === ar), hasMedia = !!EX_FRAMES[e.id], searchable = [e.n.ar, e.n.en, meta.gear || '', meta.gear_ar || '', ...(meta.aliases || [])].join(' ').toLocaleLowerCase(); return `<details class="card exlib-item" data-search="${esc(searchable)}"><summary><span>${esc(e.n[S.lang])}</span><small>${esc(gear)}</small></summary><div class="exlib-body"><div class="exlib-meta"><span class="exlib-tag"><b>${t('exlib_gear')}</b> ${esc(gear)}</span>${aliases.length ? `<span class="exlib-tag"><b>${t('exlib_aliases')}</b> ${aliases.map(esc).join(ar ? '، ' : ', ')}</span>` : ''}</div>${hasMedia ? exerciseMedia(e) : ''}<section class="exlib-sec"><h4 class="exlib-sec-head">${t('exlib_steps')}</h4><ol class="muted">${d[ar ? 0 : 2].split('|').map(x => `<li>${esc(x)}</li>`).join('')}</ol></section><div class="exlib-mistake"><b>${t('mistake')}:</b> ${esc(d[ar ? 1 : 3])}</div><a class="chip" href="${yt(e)}" target="_blank" rel="noopener">▶ ${t('exlib_video')}</a></div></details>` },
+                item = e => { const meta = exMeta(e), gear = gearOf(meta), d = EXD[e.id] || MD[e.m] || MD.core, aliases = (meta.aliases || []).filter(x => x !== e.n.en && x !== e.n.ar && isArTxt(x) === ar), hasMedia = !!exFramesById(e.id), searchable = [e.n.ar, e.n.en, meta.gear || '', meta.gear_ar || '', ...(meta.aliases || [])].join(' ').toLocaleLowerCase(); return `<details class="card exlib-item" data-search="${esc(searchable)}"><summary><span>${esc(e.n[S.lang])}</span><small>${esc(gear)}</small></summary><div class="exlib-body"><div class="exlib-meta"><span class="exlib-tag"><b>${t('exlib_gear')}</b> ${esc(gear)}</span>${aliases.length ? `<span class="exlib-tag"><b>${t('exlib_aliases')}</b> ${aliases.map(esc).join(ar ? '، ' : ', ')}</span>` : ''}</div>${hasMedia ? exerciseMedia(e) : ''}<section class="exlib-sec"><h4 class="exlib-sec-head">${t('exlib_steps')}</h4><ol class="muted">${d[ar ? 0 : 2].split('|').map(x => `<li>${esc(x)}</li>`).join('')}</ol></section><div class="exlib-mistake"><b>${t('mistake')}:</b> ${esc(d[ar ? 1 : 3])}</div><a class="chip" href="${yt(e)}" target="_blank" rel="noopener">▶ ${t('exlib_video')}</a></div></details>` },
                 filtering = !!q || EXLIB_MODE !== 'all',
                 groups = EXLIB_MUSCLES.map((ms, gi) => { const items = EX.filter(e => ms.includes(e.m) && pass(e)); return { ms, items, open: filtering || gi === 0 } }).filter(g => g.items.length);
             const modeButtons = [['all', t('exlib_all')], ['machine', t('exlib_machines')], ['barbell', t('exlib_barbell')], ['dumbbell', t('exlib_dumbbells')], ['cable', t('exlib_cables')], ['home', t('exlib_home')], ['body', t('exlib_body')]].map(([v, n]) => `<button class="chip" data-act="exmode" data-v="${v}" aria-pressed="${EXLIB_MODE === v}">${n}</button>`).join('');
-            return `<h2>${t('exlib_title')}</h2><p class="muted">${t('exlib_desc')}</p><div class="exlib-tools"><div class="searchbar"><span class="searchbar-ic">${ico('search', 'control')}</span><input type="search" data-exlib-search placeholder="${t('exlib_search')}" aria-label="${t('exlib_search')}" value="${esc(EXLIB_QUERY)}" autocomplete="off"><button type="button" class="searchbar-go" data-act="exlib-go">${t('search_go')}</button></div><div class="chips">${modeButtons}</div></div><div class="exlib-groups">${groups.map(g => { const withMedia = g.items.filter(e => EX_FRAMES[e.id]), savedN = withMedia.filter(e => EX_MEDIA_SAVED.has(e.id)).length, allSaved = withMedia.length > 0 && savedN === withMedia.length, saveBtn = withMedia.length ? `<button type="button" class="chip exlib-saveall${allSaved ? ' saved' : ''}" data-act="exlib-saveall" data-k="${withMedia.map(e => e.id).join(',')}" title="${allSaved ? t('exlib_allsaved') : t('exlib_saveall')}"${allSaved || EX_MEDIA_BULK ? ' disabled' : ''}>${allSaved ? '● ' + nf(savedN) + '/' + nf(withMedia.length) : '↓ ' + t('exlib_saveall') + ' · ' + nf(savedN) + '/' + nf(withMedia.length)}</button>` : ''; return `<details class="card exlib-group"${g.open ? ' open' : ''}><summary><span>${t('exlib_mg_' + g.ms[0])}</span><span class="exlib-group-side">${saveBtn}<small>${nf(g.items.length)}</small></span></summary><div class="exlib-list">${g.items.map(item).join('')}</div></details>` }).join('')}<p class="muted exlib-noresults"${groups.length ? ' hidden' : ''}>${t('exlib_noresults')}</p></div>`
+            return `<h2>${t('exlib_title')}</h2><p class="muted">${t('exlib_desc')}</p><div class="exlib-tools"><div class="searchbar"><span class="searchbar-ic">${ico('search', 'control')}</span><input type="search" data-exlib-search placeholder="${t('exlib_search')}" aria-label="${t('exlib_search')}" value="${esc(EXLIB_QUERY)}" autocomplete="off"><button type="button" class="searchbar-go" data-act="exlib-go">${t('search_go')}</button></div><div class="chips">${modeButtons}</div></div><div class="exlib-groups">${groups.map(g => { const withMedia = g.items.filter(e => exFramesById(e.id)), savedN = withMedia.filter(e => EX_MEDIA_SAVED.has(exMediaKey(e.id))).length, allSaved = withMedia.length > 0 && savedN === withMedia.length, saveBtn = withMedia.length ? `<button type="button" class="chip exlib-saveall${allSaved ? ' saved' : ''}" data-act="exlib-saveall" data-k="${withMedia.map(e => e.id).join(',')}" title="${allSaved ? t('exlib_allsaved') : t('exlib_saveall')}"${allSaved || EX_MEDIA_BULK ? ' disabled' : ''}>${allSaved ? '● ' + nf(savedN) + '/' + nf(withMedia.length) : '↓ ' + t('exlib_saveall') + ' · ' + nf(savedN) + '/' + nf(withMedia.length)}</button>` : ''; return `<details class="card exlib-group"${g.open ? ' open' : ''}><summary><span>${t('exlib_mg_' + g.ms[0])}</span><span class="exlib-group-side">${saveBtn}<small>${nf(g.items.length)}</small></span></summary><div class="exlib-list">${g.items.map(item).join('')}</div></details>` }).join('')}<p class="muted exlib-noresults"${groups.length ? ' hidden' : ''}>${t('exlib_noresults')}</p></div>`
         }
         Object.assign(CO.ar, { first: ['أول تمرين ليك يا {name}! بداية جامدة', 'اتحركت! أول خطوة اتعملت.'], water: ['تمام كده، المية بتفرق في الأداء والتركيز', 'كمّل شرب على مدار اليوم.'], meal: ['وجبة اتسجلت، الالتزام بيبني النتيجة', 'برافو، كمّل على نفس النظام.'], ach: ['إنجاز جديد! تعبك ظاهر', 'عاش يا {name}، ده إنجاز حقيقي.'], new: ['أهلاً يا {name}! أنا حسونة مدربك. نبدأ بأول تمرين؟', 'بداية الطريق دايماً أحلى حاجة. أنا معاك.'], weekly: ['أسبوع كامل من الالتزام! حسونة فخور بيك', 'أسبوع ممتاز يا {name}، كمّل كده.'], loss: ['الميزان بيتحرك في الاتجاه الصح', 'نزلت وزن يا بطل، استمر.'], gain: ['وزنك بيزيد بشكل حلو، عضلات جاية', 'تقدم ممتاز في البناء يا {name}.'], streak: ['سلسلة التزام {n} أيام! ماتكسرهاش.', 'التزام تلات أيام ورا بعض أو أكتر، حسونة بيصفقلك.'] });
         Object.assign(CO.en, { new: ["Hi {name}! I'm Hasona, your coach. Ready for workout one?", 'The start is the best part. I am with you.'], weekly: ['A full week of consistency! Hasona is proud', 'Great week {name}, keep going.'], loss: ['The scale is moving the right way!', 'You are losing weight, keep it up.'], gain: ['Your weight is climbing nicely, muscle is coming!', 'Great progress in building {name}.'], streak: ['Consistency streak of {n}+ days! Do not break it.', 'Three or more training days in a row, Hasona applauds.'], first: ['Your first workout {name}! Strong start', 'You moved! First step done.'], water: ['Nice, water helps performance and focus', 'Keep sipping through the day.'], meal: ['Meal logged, consistency builds results', 'Bravo, stay on the plan.'], ach: ['New achievement! Your effort shows', 'Well done {name}, a real milestone.'] });
