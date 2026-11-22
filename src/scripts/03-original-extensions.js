@@ -247,6 +247,7 @@
         }
         render = function () {
             document.documentElement.lang = S.lang; document.documentElement.dir = S.lang === 'ar' ? 'rtl' : 'ltr';
+            { const lbtn = document.querySelector('[data-act="lang"]'); if (lbtn) { lbtn.innerHTML = S.lang === 'ar' ? langFlag(0) : langFlag(1); lbtn.setAttribute('aria-label', S.lang === 'ar' ? 'اللغة: عربي' : 'Language: English') } }
             applyTheme(); { const dd = document.documentElement.dataset, sk = S.skin && S.skin !== 'auto' ? S.skin : ''; if (sk) { dd.skin = sk; delete dd.pal } else { delete dd.skin; dd.pal = S.pal && S.pal !== 'auto' ? S.pal : (S.profile.sex || 'm') } }
             document.title = t('app'); const nm = $('#lgt'); if (nm) nm.textContent = t('app');
             const nav = $('#nav'), app = $('#app'); let h = '';

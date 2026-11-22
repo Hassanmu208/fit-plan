@@ -972,6 +972,19 @@
             font-weight: 700
         }
 
+        button[data-act="lang"] {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .langflag {
+            width: 24px;
+            height: 16px;
+            border-radius: 3px;
+            display: block
+        }
+
         .stp {
             display: flex;
             align-items: center;
