@@ -4772,9 +4772,17 @@ dn|dn6|فول وطحينة بالعيش|Fava and tahini with bread|foul:.45,bala
             return `<h2>${t('wlog')}</h2>` + (rows.length ? rows.slice(0, 40).map(x => `<div class="card"><b>${esc((EXM[x.id] && EXM[x.id].n[S.lang]) || x.id)}</b><p class="muted"><bdi>${fmtD(x.d)} · ${wv(x.w)} × ${nf(x.r)}</bdi></p></div>`).join('') : `<p class="muted">${t('empty')}</p>`)
         }
         function renderProgress() {
-            const vals = wlist().map(x => x.v);
-            return `<h2>${t('nav_prog')}</h2><div class="card"><div class="hrow"><h3>${t('weight').replace(/\s*\(.*\)/, '')}</h3></div>${vals.length > 1 ? lineChart(vals, ' kg') : `<p class="muted">${t('empty')}</p>`}</div>` +
-                `<div class="hubg">${hubBtn('log', 'body', t('inbody'))}${hubBtn('pho', 'cam', t('pho'))}${hubBtn('meas', 'measure', t('meas'))}${hubBtn('wrep', 'prog', t('wrep'))}${hubBtn('rec', 'trophy', t('rec'))}${hubBtn('ach', 'achievement', t('ach'))}${hubBtn('act', 'clock', t('act'))}</div>` + timelineHtml() + weekQuick() + `<div class="row noprint" style="flex-wrap:wrap"><button class="btn" data-act="prt">${t('print')}</button><button class="btn sec" data-act="reptxt">${t('shop_txt')}</button><button class="btn sec" data-act="reppdf">${t('pdf')}</button></div>`
+            const vals = wlist().map(x => x.v), c = wcur(), s0 = wstart(), tw = +S.profile.tw || 0, cv = S.units.w === 'lb' ? 2.2046 : 1, chg = (c - s0) * cv, up = ['gainw', 'weight_gain'].includes(S.profile.primary_goal || S.profile.goal);
+            const wl7 = [...Array(7)].map((_, i) => { const d = new Date(); d.setDate(d.getDate() - i); return wml(new Date(d - d.getTimezoneOffset() * 6e4).toISOString().slice(0, 10)) }), wavg = Math.round(wl7.reduce((a, b) => a + b, 0) / 7);
+            let pct = null; if (tw && s0 !== tw) pct = Math.max(0, Math.min(100, Math.round((c - s0) / (tw - s0) * 100)));
+            const chgCol = chg === 0 ? '#8a8aa2' : (up ? chg > 0 : chg < 0) ? '#2ee6a6' : '#ffb020';
+            const tile = (v, l, col) => `<div class="tile" style="--c:${col}"><b style="font-size:1.1rem"><bdi>${v}</bdi></b><span>${l}</span></div>`;
+            return `<h2>${t('nav_prog')}</h2>` + timelineHtml() +
+                `<div class="bento">${tile(wv(c), t('rp_now'), '#3ea6ff')}${tile((chg > 0 ? '+' : '') + nf(chg, 1) + ' ' + S.units.w, t('rp_change'), chgCol)}${tile(nf(streak()), t('rp_streak'), '#ff6b47')}${tile(nf(weekVolume()), t('vol'), '#9b7bff')}${tile(nf(wavg) + ' ml', t('wq_water'), '#54b7e8')}${tile(pct == null ? '—' : nf(pct) + '%', t('prog_p'), '#2ee6a6')}</div>` +
+                `<div class="card"><div class="hrow"><h3>${t('weight').replace(/\s*\(.*\)/, '')}</h3></div>${vals.length > 1 ? lineChart(vals, ' kg') : `<p class="muted">${t('empty')}</p>`}</div>` +
+                `<div class="hubg">${hubBtn('log', 'body', t('inbody'))}${hubBtn('pho', 'cam', t('pho'))}${hubBtn('meas', 'measure', t('meas'))}${hubBtn('wrep', 'prog', t('wrep'))}${hubBtn('rec', 'trophy', t('rec'))}${hubBtn('ach', 'achievement', t('ach'))}${hubBtn('act', 'clock', t('act'))}</div>` +
+                weekQuick() +
+                `<div class="card noprint"><h3>${t('rep_share')}</h3><div class="row" style="flex-wrap:wrap"><button class="btn" data-act="prt">${t('print')}</button><button class="btn sec" data-act="reptxt">${t('shop_txt')}</button><button class="btn sec" data-act="reppdf">${t('pdf')}</button></div></div>`
         }
         function navOf(v) { if (['meals', 'wplan', 'food', 'shop', 'supp'].includes(v)) return 'nutri'; if (['plan', 'exlib', 'wlog'].includes(v)) return 'workout'; if (['log', 'pho', 'meas', 'ach', 'rec', 'act', 'wrep'].includes(v)) return 'progress'; if (v === 'terms' || v === 'more') return 'set'; if (['home', 'nutri', 'workout', 'progress', 'set'].includes(v)) return v; return 'home' }
         const BACK = { meals: 'nutri', wplan: 'nutri', food: 'nutri', shop: 'nutri', supp: 'nutri', plan: 'workout', exlib: 'workout', wlog: 'workout', log: 'progress', pho: 'progress', meas: 'progress', ach: 'progress', rec: 'progress', act: 'progress', wrep: 'progress', terms: 'set' };
