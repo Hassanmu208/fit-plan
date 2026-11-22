@@ -704,38 +704,49 @@
 
         .dw {
             position: relative;
-            display: flex;
-            align-items: center;
-            width: 100%;
-            height: 44px;
-            min-height: 44px;
-            background: var(--card2);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 0 12px;
-            margin-top: 4px;
-            box-sizing: border-box;
-            overflow: hidden
+            display: block
         }
 
         .dw .dwv {
-            font-size: .9rem;
-            color: var(--text)
+            display: none
         }
 
-        .dw .dwv.ph {
-            color: var(--muted)
-        }
+        @media (pointer: coarse) {
+            .dw {
+                display: flex;
+                align-items: center;
+                margin-top: 4px;
+                width: 100%;
+                height: 44px;
+                min-height: 44px;
+                background: var(--card2);
+                border: 1px solid var(--border);
+                border-radius: 10px;
+                padding: 0 12px;
+                box-sizing: border-box;
+                overflow: hidden
+            }
 
-        .dw input[type=date] {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            border: 0;
-            opacity: 0
+            .dw .dwv {
+                display: block;
+                font-size: .9rem;
+                color: var(--text)
+            }
+
+            .dw .dwv.ph {
+                color: var(--muted)
+            }
+
+            .dw input[type=date] {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                opacity: 0
+            }
         }
 
         body {
