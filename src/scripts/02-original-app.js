@@ -1717,7 +1717,7 @@ dn|dn6|فول وطحينة بالعيش|Fava and tahini with bread|foul:.45,bala
             return h
         }
         function wipeCard() {
-            return WIPE ? `<div class="warn" role="alertdialog"><b>${t(WIPE === 1 ? 'wipe_1' : 'wipe_2')}</b><div class="row"><button class="btn" style="background:var(--accent3)" data-act="wipe2">${t(WIPE === 1 ? 'wipe_go' : 'wipe_final')}</button><button class="btn sec" data-act="wipe0">${t('cancel')}</button></div><div class="row"><button class="btn sec" data-act="bkexp">${t('export')}</button></div></div>` : ''
+            return WIPE ? `<div class="warn" role="alertdialog" style="margin-top:10px"><b>${t(WIPE === 1 ? 'wipe_1' : 'wipe_2')}</b><div class="row"><button class="btn" style="background:var(--accent3)" data-act="wipe2">${t(WIPE === 1 ? 'wipe_go' : 'wipe_final')}</button><button class="btn sec" data-act="wipe0">${t('cancel')}</button></div><div class="row"><button class="btn sec" data-act="bkexp">${t('export')}</button></div></div>` : ''
         }
         const APPV = '1.5.0', DATA_VERSION = 2, TRIAL_ID = 't1', OPEN = new Set();
         const WN = { ar: { f: ['تنظيم الشاشات: رئيسية، تغذية، تمرين، تقدم، إعدادات'], x: [], i: [] }, en: { f: ['Screens reorganized: Dashboard, Nutrition, Workout, Progress, Settings'], x: [], i: [] } };
