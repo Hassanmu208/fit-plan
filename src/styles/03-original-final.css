@@ -280,3 +280,4 @@ details.phase-card[open]>summary{margin-bottom:10px}
 @media(prefers-reduced-motion:reduce){.card.sub-ring{animation:none}}
 .bkrow{flex-wrap:nowrap}
 .bkrow>.btn{flex:1;min-width:0;min-height:44px;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;padding-inline:8px;box-sizing:border-box}
+.back+h2{display:flex;align-items:center;justify-content:center;gap:8px;text-align:center;min-width:0}
