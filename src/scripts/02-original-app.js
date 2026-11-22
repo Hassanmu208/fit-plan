@@ -792,6 +792,7 @@ kfore|stretch|stretch|gdb|wrist||إطالة ساعد راكعة|Kneeling Forearm
             midback: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_724__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_725__' },
             kbiceps: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_726__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_727__' },
             kfore: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_728__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_729__' },
+                    pallof: { a: 'data:image/jpeg;base64,__FITPLAN_ASSET_730__', b: 'data:image/jpeg;base64,__FITPLAN_ASSET_731__' },
         };
         const exFramesById = id => (S.profile.sex === 'f' && EX_FRAMES_F[id]) || EX_FRAMES[id];
         const exMediaKey = id => (S.profile.sex === 'f' ? id + '#f' : id);

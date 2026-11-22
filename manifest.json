@@ -3735,6 +3735,16 @@
             "token": "__FITPLAN_ASSET_729__",
             "file": "assets/exf-kfore-1.jpg",
             "mime": "jpeg"
+        },
+        {
+            "token": "__FITPLAN_ASSET_730__",
+            "file": "assets/exf-pallof-0.jpg",
+            "mime": "jpeg"
+        },
+        {
+            "token": "__FITPLAN_ASSET_731__",
+            "file": "assets/exf-pallof-1.jpg",
+            "mime": "jpeg"
         }
-    ]
+]
 }
