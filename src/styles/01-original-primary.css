@@ -737,7 +737,8 @@
                 color: var(--muted)
             }
 
-            .dw input[type=date] {
+            .dw input[type=date],
+            .dw input[type=time] {
                 position: absolute;
                 inset: 0;
                 width: 100%;
@@ -747,6 +748,11 @@
                 border: 0;
                 opacity: 0
             }
+        }
+
+        .w-row .dw {
+            flex: 1;
+            min-width: 0
         }
 
         body {
