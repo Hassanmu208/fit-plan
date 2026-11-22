@@ -798,7 +798,7 @@ kfore|stretch|stretch|gdb|wrist||إطالة ساعد راكعة|Kneeling Forearm
         };
         const exFramesById = id => (S.profile.sex === 'f' && EX_FRAMES_F[id]) || EX_FRAMES[id];
         const exMediaKey = id => (S.profile.sex === 'f' ? id + '#f' : id);
-        const EX_MEDIA_URLS = new Map(), EX_MEDIA_SAVED = new Set(), EX_MEDIA_PENDING = new Set(), EX_MEDIA_VER = 3;
+        const EX_MEDIA_URLS = new Map(), EX_MEDIA_SAVED = new Set(), EX_MEDIA_PENDING = new Set(), EX_MEDIA_VER = 4;
         const chestMediaDb = () => new Promise((resolve, reject) => { try { const req = indexedDB.open('fitplan-exercise-media', 1); req.onupgradeneeded = () => { if (!req.result.objectStoreNames.contains('media')) req.result.createObjectStore('media') }; req.onsuccess = () => resolve(req.result); req.onerror = () => reject(req.error) } catch (e) { reject(e) } });
         function chestMediaGetAll() { return chestMediaDb().then(db => new Promise((resolve, reject) => { const tx = db.transaction('media', 'readonly'), rq = tx.objectStore('media').getAll(); rq.onsuccess = () => resolve(rq.result || []); rq.onerror = () => reject(rq.error); tx.oncomplete = () => db.close(); tx.onerror = () => { db.close(); reject(tx.error) } })) }
         function chestMediaWrite(id, value) { return chestMediaDb().then(db => new Promise((resolve, reject) => { const tx = db.transaction('media', 'readwrite'); tx.objectStore('media').put(value, id); tx.oncomplete = () => { db.close(); resolve() }; tx.onerror = () => { db.close(); reject(tx.error) } })) }
