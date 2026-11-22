@@ -702,6 +702,14 @@
             box-sizing: border-box
         }
 
+        @supports (-webkit-touch-callout: none) {
+            input[type=date],
+            input[type=time] {
+                -webkit-appearance: textfield;
+                appearance: textfield
+            }
+        }
+
         body {
             padding-bottom: calc(96px + env(safe-area-inset-bottom))
         }

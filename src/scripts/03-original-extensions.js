@@ -195,10 +195,11 @@
             let pct = null; if (tw && s0 !== tw) pct = Math.max(0, Math.min(100, Math.round((c - s0) / (tw - s0) * 100)));
             const chgCol = chg === 0 ? '#8a8aa2' : (up ? chg > 0 : chg < 0) ? '#2ee6a6' : '#ffb020';
             const tile = (v, l, col) => `<div class="tile" style="--c:${col}"><b style="font-size:1.1rem"><bdi>${v}</bdi></b><span>${l}</span></div>`;
-            return `<h2>${t('nav_prog')}</h2>` + timelineHtml() +
+            return `<h2>${t('nav_prog')}</h2>` +
+                `<div class="hubg">${hubBtn('log', 'body', t('inbody'))}${hubBtn('pho', 'cam', t('pho'))}${hubBtn('meas', 'measure', t('meas'))}${hubBtn('wrep', 'prog', t('wrep'))}${hubBtn('rec', 'trophy', t('rec'))}${hubBtn('ach', 'achievement', t('ach'))}${hubBtn('act', 'clock', t('act'))}</div>` +
+                timelineHtml() +
                 `<div class="bento">${tile(wv(c), t('rp_now'), '#3ea6ff')}${tile((chg > 0 ? '+' : '') + nf(chg, 1) + ' ' + S.units.w, t('rp_change'), chgCol)}${tile(nf(streak()), t('rp_streak'), '#ff6b47')}${tile(nf(weekVolume()), t('vol'), '#9b7bff')}${tile(nf(wavg) + ' ml', t('wq_water'), '#54b7e8')}${tile(pct == null ? '—' : nf(pct) + '%', t('prog_p'), '#2ee6a6')}</div>` +
                 `<div class="card"><div class="hrow"><h3>${t('weight').replace(/\s*\(.*\)/, '')}</h3></div>${vals.length > 1 ? lineChart(vals, ' kg') : `<p class="muted">${t('empty')}</p>`}</div>` +
-                `<div class="hubg">${hubBtn('log', 'body', t('inbody'))}${hubBtn('pho', 'cam', t('pho'))}${hubBtn('meas', 'measure', t('meas'))}${hubBtn('wrep', 'prog', t('wrep'))}${hubBtn('rec', 'trophy', t('rec'))}${hubBtn('ach', 'achievement', t('ach'))}${hubBtn('act', 'clock', t('act'))}</div>` +
                 weekQuick() +
                 `<div class="card noprint"><h3>${t('rep_share')}</h3><div class="row" style="flex-wrap:wrap"><button class="btn" data-act="prt">${t('print')}</button><button class="btn sec" data-act="reptxt">${t('shop_txt')}</button><button class="btn sec" data-act="reppdf">${t('pdf')}</button></div></div>`
         }
