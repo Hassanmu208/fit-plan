@@ -179,10 +179,9 @@
         function weekVolume() { const ds = last7(), L = S.logs.done || {}; let n = 0; Object.keys(L).forEach(k => { if (ds.includes(k.slice(0, 10))) n += L[k].filter(Boolean).length }); return n }
         function renderWorkout() {
             const wd = new Date().getDay(), di = TRD().indexOf(wd), d = di >= 0 ? S.plan.plan[di] : null;
-            return `<h2>${t('nav_wo')}</h2>` + coachCard() + recCard() + catchCard() +
-                `<button class="card" data-act="toplan" style="width:100%;text-align:start"><h3>${t('today_wo')}</h3><p>${d ? t('g_' + d.ty) + ' · ' + nf(sdSafe(d)) + ' ' + t('ex_n') : t('rest_today')}</p></button>` +
-                schedCard() + `<div class="hubg">${hubBtn('plan', 'wo', t('plan'))}${hubBtn('exlib', 'library', t('exlib'))}${hubBtn('wlog', 'clock', t('wlog'))}</div>` +
-                `<div class="card"><div class="hrow"><h3>${t('vol')}</h3>${infoBtn('volume')}</div><b>${nf(weekVolume())}</b><p class="muted">${t('sets_n')}</p><h3 style="margin-top:10px">${t('rest_go')}</h3><div class="chips">${[60, 90, 120].map(s => `<button class="chip" data-act="restgo" data-v="${s}">${s}s</button>`).join('')}</div></div>`
+            return `<h2>${t('nav_wo')}</h2>` + schedCard() + coachCard() + recCard() + catchCard() +
+                `<button class="card" data-act="toplan" style="width:100%;text-align:start"><h3>${t('today_wo')}</h3><p>${d ? t('g_' + d.ty) : t('rest_today')}</p></button>` +
+                `<div class="hubg">${hubBtn('plan', 'wo', t('plan'))}${hubBtn('exlib', 'library', t('exlib'))}${hubBtn('wlog', 'clock', t('wlog'))}</div>`
         }
         function sdSafe(d) { return d && d.ex ? d.ex.length : 0 }
         function renderExLib() {
