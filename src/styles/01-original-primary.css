@@ -2243,6 +2243,14 @@
             flex-direction: row
         }
 
+        .hub-sub {
+            display: block;
+            font-size: .72rem;
+            font-weight: 600;
+            color: var(--muted);
+            margin-top: 2px
+        }
+
         .big .ni {
             display: flex;
             width: 28px;

@@ -157,7 +157,7 @@
         function payBox() {
             const list = (S.pays || []).map(p => `<div class="proof"><img src="${PAY[p.id] || ''}" alt="receipt"><div style="flex:1"><bdi>${fmtD(p.d)}</bdi><div class="row"><button class="btn sec" data-act="payshare" data-k="${p.id}">${t('pay_share')}</button><button class="swap" data-act="paydel" data-k="${p.id}" aria-label="x">${icDel()}</button></div></div></div>`).join('');
             return `<details class="card settings-subsec"><summary><b>${t('pay_group')}</b></summary><div class="settings-sub-content"><p class="muted">${t('pay_note')}</p><div class="payg"><a class="payb" href="https://ipn.eg/S/hassanmu208/instapay/54x0Lg" target="_blank" rel="noopener"><svg viewBox="0 0 64 40"><rect width="64" height="40" rx="8" fill="#5b2dff"/><text x="32" y="25" text-anchor="middle" fill="#fff" font-size="9" font-family="sans-serif">InstaPay</text></svg>${t('pay_ip')}</a><a class="payb" href="http://vf.eg/vfcash?id=mt&qrId=yJ8z3D" target="_blank" rel="noopener"><svg viewBox="0 0 64 40"><rect width="64" height="40" rx="8" fill="#e60000"/><text x="32" y="25" text-anchor="middle" fill="#fff" font-size="8" font-family="sans-serif">VF Cash</text></svg>${t('pay_vf')}</a></div>${list}</div></details><details class="card settings-subsec"><summary><b>${t('support_group')}</b></summary><div class="settings-sub-content"><p class="muted">${t('sup_note')}</p><a class="wabtn" href="https://wa.me/201098515204" target="_blank" rel="noopener" aria-label="${t('sup_t')}"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M16 3a13 13 0 0 0-11.2 19.5L3 29l6.7-1.8A13 13 0 1 0 16 3zm0 2.2a10.8 10.8 0 0 1 0 21.6 10.7 10.7 0 0 1-5.5-1.5l-.4-.2-4 .9.9-3.9-.2-.4A10.8 10.8 0 0 1 16 5.2zm6.1 15.3c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.3-1.7-1.3-3.3s.8-2.3 1.1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.6.8 2 1 2.1.1.2 0 .3-.1.5l-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.2.6-.1l.8-1c.2-.2.4-.2.6-.1.2.1 1.6.8 1.9.9.3.2.4.2.5.3.1.3.1.8-.1 1.5z"/></svg></a></div></details>`
-        }        function hubBtn(v, ic, lab) { return `<button class="big" data-act="view" data-v="${v}"><span class="ni">${ico(ic, 'feature')}</span>${lab}</button>` }
+        }        function hubBtn(v, ic, lab, act) { return `<button class="big" data-act="${act || 'view'}" data-v="${v}"><span class="ni">${ico(ic, 'feature')}</span>${lab}</button>` }
         function macroTile(k, val, label, c) { const icon = { prot: 'protein', carb: 'carbs', fat: 'fat' }[k] || 'calories'; return `<div class="tile" style="--c:${c}"><div class="hrow"><span>${ico(icon, 'control')} ${label}</span>${infoBtn(k)}</div><b>${val}</b></div>` }
         function renderHome() {
             const P = S.plan; if (!P || P.blocked) return `<div class="warn">${t('n_preg')}</div>`;
@@ -179,9 +179,9 @@
         function weekVolume() { const ds = last7(), L = S.logs.done || {}; let n = 0; Object.keys(L).forEach(k => { if (ds.includes(k.slice(0, 10))) n += L[k].filter(Boolean).length }); return n }
         function renderWorkout() {
             const wd = new Date().getDay(), di = TRD().indexOf(wd), d = di >= 0 ? S.plan.plan[di] : null;
+            const wsub = d ? t('g_' + d.ty) : t('rest_today').replace(/^\S+\s/, '');
             return `<h2>${t('nav_wo')}</h2>` + schedCard() + coachCard() + recCard() + catchCard() +
-                `<button class="card" data-act="toplan" style="width:100%;text-align:start"><h3>${t('today_wo')}</h3><p>${d ? t('g_' + d.ty) : t('rest_today')}</p></button>` +
-                `<div class="hubg">${hubBtn('plan', 'wo', t('plan'))}${hubBtn('exlib', 'library', t('exlib'))}${hubBtn('wlog', 'clock', t('wlog'))}</div>`
+                `<div class="hubg">${hubBtn('plan', 'wo', t('today_wo') + '<small class="hub-sub">(' + wsub + ')</small>', 'toplan')}${hubBtn('exlib', 'library', t('exlib'))}${hubBtn('wlog', 'clock', t('wlog'))}</div>`
         }
         function sdSafe(d) { return d && d.ex ? d.ex.length : 0 }
         function renderExLib() {
