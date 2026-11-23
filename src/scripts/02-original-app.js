@@ -1161,20 +1161,61 @@ dn|dn7|شكشوكة بالعيش|Shakshuka with bread|egg:.35,tomato:.3,baladi:.
         const FTAG = { tuna: 'canned', sardine: 'canned' };
         const cost = id => (S.profile.cost || {})[id] || COSTD[id] || 'm';
         const allergyNote = () => (S.profile.allergy || []).some(x => x !== 'none') ? `<p class="warn">${t('allergy_caution')}</p>` : '';
+        let _mday = -1, _mused = new Set();
         function meal(d, k) {
-            CURK = k; const share = (TRD().includes(d) ? SH_T : SH_R)[k] * dayF(d), K = S.plan.kcal * share;
+            CURK = k; if (d !== _mday) { _mday = d; _mused = new Set() }
+            const share = (TRD().includes(d) ? SH_T : SH_R)[k] * dayF(d), K = S.plan.kcal * share;
             const catFoods = typeof fpPool === 'function' ? fpPool() : [];
             const bud = (S.profile || {}).budget || 'mid', sc = x => (typeof fcPrefValue === 'function' && fcPrefValue(x) === 1 ? 2 : 0) + ((bud === 'eco' ? { e: 2, m: 0, h: -3 } : bud === 'mid' ? { e: 1, m: 1, h: -1 } : { e: -.5, m: 0, h: 1 })[(typeof fcCostValue === 'function' ? fcCostValue(x) : 'm') || 'm']);
             const pick = (a, i, skip = []) => { a = a.filter(x => fpSlotOk(x, k) && !skip.includes(x.id)).sort((x, y) => sc(y) - sc(x)); if (!a.length) return null; const top = sc(a[0]), p = a.filter(x => sc(x) >= top - 2); return p[i % p.length] };
-            const pool = ty => catFoods.filter(x => fpCatRole(x) === ty);
-            const gr = (x, s, total = 1, target = K) => Math.max(5, Math.round(target * s / total / (fpItemK100(x) / 100) / 5) * 5);
-            const mkc = (plan, seed) => { const fixed = [], shared = [], used = []; let rest = K, i = 0; plan.forEach(([ty, amt]) => { const x = pick(pool(ty), seed + i++, used); if (!x) return; used.push(x.id); if (typeof amt === 'number') shared.push([x, amt]); else { const g = parseInt(amt); fixed.push([x.id, g]); rest -= fpItemK100(x) * g / 100 } }); const tot = shared.reduce((a, [, s]) => a + s, 0) || 1; return [...shared.map(([x, s]) => [x.id, gr(x, s, tot, Math.max(30, rest))]), ...fixed] };
+            const pool = (ty, sp) => catFoods.filter(x => fpCatRole(x) === ty && (typeof fpSpecOk !== 'function' || fpSpecOk(x, sp)));
+            const gr = (x, s, total = 1, target = K) => Math.min(650, Math.max(5, Math.round(target * s / total / (fpItemK100(x) / 100) / 5) * 5));
+            const mkc = (plan, seed) => { const fixed = [], shared = [], used = [..._mused]; let rest = K, i = 0; plan.forEach(([ty, sp, amt]) => { const x = pick(pool(ty, sp), seed + i++, used); if (!x) return; used.push(x.id); if (typeof amt === 'number') shared.push([x, amt]); else { const g = parseInt(amt); fixed.push([x.id, g]); rest -= fpItemK100(x) * g / 100 } }); const tot = shared.reduce((a, [, s]) => a + s, 0) || 1; return [...shared.map(([x, s]) => [x.id, gr(x, s, tot, Math.max(30, rest))]), ...fixed] };
             const nmOf = items => ({ ar: items.map(([id]) => fpFoodNameL(id, 'ar')).join(' + '), en: items.map(([id]) => fpFoodNameL(id, 'en')).join(' + ') });
-            const PLANS = { bf: [[['p', .4], ['c', .45], ['v', '150g']], [['p', .45], ['c', .4], ['v', '100g']], [['p', .35], ['c', .35], ['r', .3]], [['p', .5], ['c', .4], ['f', '12g']]], ln: [[['p', .4], ['c', .45], ['v', '150g']], [['p', .45], ['c', .4], ['v', '150g']], [['p', .35], ['c', .5], ['v', '150g']], [['p', .4], ['c', .35], ['v', '250g']]], sn: [[['r', .6], ['p', .4]], [['f', .5], ['r', .5]], [['p', .6], ['r', .4]], [['r', 1]]], pw: [[['p', .5], ['r', .5]], [['r', .55], ['f', .45]], [['p', .55], ['c', .45]]], dn: [[['p', .45], ['v', '150g'], ['c', .35]], [['p', .5], ['c', .3], ['v', '150g']], [['p', .4], ['v', '200g'], ['c', .3]], [['p', .6], ['v', '250g']]] };
-            const plans = PLANS[k] || PLANS.dn, seq = [];
-            for (let i = 0; i < Math.max(4, plans.length); i++) { const items = mkc(plans[(d + i) % plans.length], d * 3 + i * 5); if (items.length) seq.push({ items, nm: nmOf(items) }) }
+            const GARN = [{ sub: /سلطات|مخللات|أطباق خضار/ }, { nm: /خيار|طماطم|جزر|فلفل حلو|خس|جرجير/ }], BREAD = [{ sub: /^(خبز|مخبوزات)$/, nmx: /جلاش|قاعدة بيتزا|عجينة/ }], CEREAL = [{ sub: /حبوب/ }], STARCH = [{ sub: /أرز|مكرونة|حبوب|نشويات|مخبوزات|خبز|دقيق/, nmx: /جلاش|قاعدة بيتزا|عجينة/ }], VEGD = [{ sub: /سلطات|مخللات|أطباق خضار/ }, { nm: /خيار|طماطم|جزر|فلفل حلو|خس|جرجير|بامية|ملوخية|سبانخ|باذنجان|كوسة|بروكلي|قرنبيط|كرنب|بسلة|كابوتشا|سلطة/ }], DAIRY = [{ sub: /^(لبن|زبادي|ألبان|مشروبات|حلويات ألبان)$/, nmx: /مكثف|مبخر/ }], CHEESE = [{ sub: /جبن/ }], LEGUME = [{ sub: /بقوليات|أطباق نباتية/ }], CANP = [{ cat: /معلبات/ }], SWEET = [{ sub: /محليات|مربى|صوصات/ }], NUTS = [{ sub: /مكسرات|بذور/ }], MEATP = [{ cat: /لحوم|دواجن|أسماك/ }], DISH = [{ sub: /أطباق مصرية|أطباق خليجية|محشي/ }], DISHV = [{ sub: /أطباق نباتية|أطباق مصرية/ }];
+            const COMPOS = {
+                bf: [
+                    [['p', LEGUME.concat(CHEESE, CANP), .45], ['c', BREAD, .4], ['v', GARN, '80g']],
+                    [['p', DAIRY, .45], ['c', CEREAL, .3], ['r', null, .25]],
+                    [['p', DISHV, .6], ['c', BREAD, .4]],
+                    [['c', BREAD, .45], ['c', SWEET, '45g'], ['p', DAIRY, .55]],
+                    [['p', CHEESE.concat(LEGUME), .5], ['c', BREAD, .35], ['v', GARN, '80g']]
+                ],
+                ln: [
+                    [['p', MEATP.concat(LEGUME), .4], ['c', STARCH, .4], ['v', VEGD, '150g']],
+                    [['p', DISH.concat([{ sub: /أطباق نباتية|أطباق لحوم|أطباق سمك/ }]), .8], ['v', VEGD, '150g']],
+                    [['p', LEGUME.concat(CANP), .45], ['c', BREAD.concat([{ sub: /أرز|حبوب/ }]), .4], ['v', GARN, '150g']],
+                    [['p', MEATP, .42], ['c', STARCH, .38], ['v', VEGD, '200g']]
+                ],
+                sn: [
+                    [['r', null, .6], ['f', NUTS, .4]],
+                    [['p', DAIRY, .6], ['r', null, .4]],
+                    [['r', null, 1]],
+                    [['f', NUTS, 1]]
+                ],
+                pw: [
+                    [['p', [{ sub: /^(لبن|زبادي|ألبان|مشروبات)$/ }], .55], ['r', null, .45]],
+                    [['r', null, .6], ['f', NUTS, .4]],
+                    [['p', [{ sub: /^(لبن|زبادي|ألبان|مشروبات)$/ }], .5], ['c', CEREAL, .5]]
+                ],
+                dn: [
+                    [['p', CHEESE.concat(CANP, LEGUME), .45], ['c', BREAD, .35], ['v', GARN, '150g']],
+                    [['p', DAIRY.concat(CHEESE), .55], ['r', null, .45]],
+                    [['p', DISHV, .6], ['c', BREAD, .4]],
+                    [['p', MEATP, .45], ['v', VEGD, '200g']],
+                    [['p', LEGUME, .45], ['c', BREAD, .35], ['v', GARN, '150g']]
+                ]
+            };
+            const plans = COMPOS[k] || COMPOS.dn, seq = [], main = k === 'bf' || k === 'ln' || k === 'dn';
+            for (let i = 0; i < Math.max(4, plans.length); i++) {
+                const items = mkc(plans[(d + i) % plans.length], d * 3 + i * 5); if (!items.length) continue;
+                const kc = items.reduce((n, [id, g]) => n + fpItemKcal(id, g), 0);
+                if (main && (items.length < 2 || kc < K * .35) || !main && kc < K * .3) continue;
+                seq.push({ items, nm: nmOf(items) })
+            }
             if (!seq.length) { const a = pick(pool('p'), d), b = pick(pool('c'), d); return { k, nm: { ar: 'وجبة بسيطة', en: 'Simple meal' }, items: [a, b].filter(Boolean).map((x, i) => [x.id, gr(x, i ? .4 : .5)]), alt: [], altnm: null, tip: null, short: true } }
             const sw = (S.logs.swap[d + k] || 0) % seq.length, cur = seq[sw], nxt = seq[(sw + 1) % seq.length];
+            cur.items.forEach(([id]) => _mused.add(id));
             return { k, nm: cur.nm, tip: null, items: cur.items, alt: nxt.items, altnm: nxt.nm }
         }
         const NFK = ['k', 'p', 'c', 'f', 'fiber', 'sugars', 'sat', 'sodium'];
