@@ -67,7 +67,7 @@ const FP_RECIPE_BOOK={
  }
 };
 const fpRecipeCandidate=(d,k,index)=>{
- const mode=(S.profile||{}).foodMode==='cook'?'cook':'quick',foods=fpPool(),book=FP_RECIPE_BOOK[mode][k]||[],cap=fpLimits(d,k),baseMeal=meal(d,k),baseKcal=(baseMeal.items||[]).reduce((n,[id,g])=>n+(FD[id]?FD[id].k*g/100:0),0),target=Math.min(cap.kcal,baseKcal||cap.kcal),out=[];
+ const mode=(S.profile||{}).foodMode==='cook'?'cook':'quick',foods=fpPool(),book=FP_RECIPE_BOOK[mode][k]||[],cap=fpLimits(d,k),baseMeal=meal(d,k),baseKcal=(baseMeal.items||[]).reduce((n,[id,g])=>n+fpItemKcal(id,g),0),target=Math.min(cap.kcal,baseKcal||cap.kcal),out=[];
  book.forEach((r,ri)=>{
   const chosen=r.pick.map(rx=>foods.find(x=>rx.test(x.nameAr+' '+(x.nameEn||'')))); if(chosen.some(x=>!x))return;
   const core=chosen.map((x,i)=>({id:x.id,g:r.g[i]||100})),season=[];

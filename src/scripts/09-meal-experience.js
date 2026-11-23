@@ -3,7 +3,7 @@ const FP_SWAP_TEXT={ar:{original:'الوجبة الأصلية',changedUp:'إجم
 const fpSwapWords=()=>FP_SWAP_TEXT[S.lang==='en'?'en':'ar'];
 const fpWarn=(message,kind='warn')=>{const box=document.createElement('div');box.className='fp-user-notice '+kind;box.setAttribute('role','status');const text=document.createElement('span');text.textContent=message;const close=document.createElement('button');close.type='button';close.className='fp-notice-close';close.setAttribute('aria-label',S.lang==='en'?'Dismiss':'إغلاق');close.textContent='×';close.addEventListener('click',()=>box.remove());box.append(text,close);document.body.appendChild(box);setTimeout(()=>box.remove(),10000)};
 const fpDaySlots=d=>TRD().includes(d)?['bf','ln','sn','pw','dn']:['bf','ln','sn','dn'];
-const fpBaseKcal=(d,k)=>{if(k==='dn'&&isFree(d))return 0;const m=meal(d,k);return(m.items||[]).reduce((n,[id,g])=>n+(FD[id]?FD[id].k*g/100:0),0)};
+const fpBaseKcal=(d,k)=>{if(k==='dn'&&isFree(d))return 0;const m=meal(d,k);return(m.items||[]).reduce((n,[id,g])=>n+fpItemKcal(id,g),0)};
 const fpCurrentKcal=(d,k)=>{const r=(((S.logs||{}).customMeals||{})[d+'|'+k]);return r&&r.active&&r.foodMode===((S.profile||{}).foodMode||'quick')?fpSum(r.items||[]).kcal:fpBaseKcal(d,k)};
 const fpDayBaseline=d=>fpDaySlots(d).reduce((n,k)=>n+fpBaseKcal(d,k),0);
 const fpDayCalories=d=>fpDaySlots(d).reduce((n,k)=>n+fpCurrentKcal(d,k),0);
