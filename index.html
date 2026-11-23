@@ -353,11 +353,21 @@
             gap: 6px;
             overflow-x: auto;
             margin-bottom: 12px;
-            scrollbar-width: none
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            overscroll-behavior-x: contain;
+            -webkit-overflow-scrolling: touch
+        }
+
+        .days::-webkit-scrollbar {
+            display: none
         }
 
         .days .chip {
-            flex-shrink: 0
+            flex-shrink: 0;
+            -webkit-user-select: none;
+            user-select: none;
+            touch-action: pan-x pan-y
         }
 
         .meal {
@@ -4036,6 +4046,7 @@ dn|dn7|شكشوكة بالعيش|Shakshuka with bread|egg:.35,tomato:.3,baladi:.
             { const ak = !S.langSet ? 'l' : !S.plan ? 'o' + S.step : S.view, chg = ak !== LV; LV = ak; app.className = nav.className = chg ? 'anim' : '' }
             app.innerHTML = h;
 
+            const dsel = app.querySelector('.days .chip[aria-pressed="true"]'); if (dsel) dsel.scrollIntoView({ inline: 'nearest', block: 'nearest' });
             document.querySelectorAll('details').forEach(d => { if (OPEN.has(dkey(d))) d.open = true });
             if (typeof requestAnimationFrame === 'function') requestAnimationFrame(() => document.querySelectorAll('.wf').forEach(e => e.style.setProperty('--fl', e.dataset.to))); JUST = ''; try { celCheck() } catch (e) { } try { wnCheck() } catch (e) { } { const tb = document.querySelector('#tb'); if (tb) tb.innerHTML = (S.langSet && S.trialSeen !== TRIAL_ID) ? `<div class="trial" role="note"><span>${t('trial_msg')}</span><button class="x2" data-act="trialx" aria-label="${t('close')}">✕</button></div>` : '' } try { remCheck() } catch (e) { }
         }
@@ -4838,6 +4849,12 @@ dn|dn7|شكشوكة بالعيش|Shakshuka with bread|egg:.35,tomato:.3,baladi:.
             else if (a === 'payup') { return }
             save()
         });
+        document.addEventListener('wheel', e => { const d = e.target.closest && e.target.closest('.days'); if (!d || d.scrollWidth <= d.clientWidth || Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return; d.scrollBy({ left: e.deltaY * (getComputedStyle(d).direction === 'rtl' ? -1 : 1) }); e.preventDefault() }, { passive: false });
+        let DSD = null, DSDM = 0;
+        document.addEventListener('pointerdown', e => { const d = e.target.closest && e.target.closest('.days'); if (d && e.pointerType === 'mouse') DSD = { el: d, x: e.clientX, l: d.scrollLeft } });
+        document.addEventListener('pointermove', e => { if (!DSD) return; const dx = e.clientX - DSD.x; if (Math.abs(dx) > 4) { DSDM = 1; DSD.el.scrollLeft = DSD.l - dx } });
+        document.addEventListener('pointerup', () => { DSD = null });
+        document.addEventListener('click', e => { if (DSDM && e.target.closest && e.target.closest('.days')) { e.preventDefault(); e.stopImmediatePropagation() } DSDM = 0 }, true);
         setInterval(() => { if (S.tmode === 'auto') applyTheme() }, 300000);
         setInterval(() => { try { remCheck() } catch (e) { } }, 60000);
         setInterval(() => { document.querySelectorAll('.exercise-anim').forEach(el => { if (el.offsetParent) el.classList.toggle('on') }) }, 1050);
