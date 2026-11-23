@@ -806,6 +806,14 @@
             padding: 6px 8px
         }
 
+        .ic-act {
+            display: inline-block;
+            width: 1.05em;
+            height: 1.05em;
+            flex: none;
+            vertical-align: -.14em
+        }
+
         .ico {
             display: block;
             width: var(--icon-inline);
